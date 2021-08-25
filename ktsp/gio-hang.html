@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>ktsp.vn</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="font-awesome.js" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <!-- Header top -->
+    <div class="header__top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="header__top__info">
+              <ul>
+                <li><a href="#">Kênh Người Bán</a></li>
+                <li><a href="#">Tải ứng dụng</a></li>
+                <li><a href="mailto:info@ktsp.vn">info@ktsp.vn</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="header__top__account">
+              <ul>
+                <li><a href="#" data-toggle="modal" data-target="#modal-login">Đăng Nhập</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#modal-register">Đăng Ký</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End header top -->
+
+    <!-- Modal login -->
+    <div class="modal fade modal-popup" id="modal-login" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">ĐĂNG NHẬP</h5>
+            <p class="modal-desc">Dễ dàng truy cập lịch sử đơn hàng, lưu sản phẩm yêu thích, xem giỏ hàng, nhận ưu đãi và nhiều hơn nữa.</p>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="fa fa-times-circle"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="username-label">Tên đăng nhập</label>
+                <input type="text" class="form-control" id="username-label" placeholder="Số điện thoại/Email">
+              </div>
+              <div class="form-group">
+                <label for="password-label">Mật khẩu</label>
+                <input type="password" class="form-control" id="password-label" placeholder="Nhập mật khẩu">
+              </div>
+              <div class="fogot">
+                <a href="#" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#modal-fogot">Quên mật khẩu?</a>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Đăng nhập</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p>Bạn chưa có tài khoản tại ktsp.vn?</p>
+            <button type="button" class="btn btn-outline-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#modal-register">Đăng ký</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal login -->
+
+    <!-- Modal Fogot Password -->
+    <div class="modal fade modal-popup" id="modal-fogot" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">QUÊN MẬT KHẨU</h5>
+            <p class="modal-desc">Vui lòng nhập số điện thoại bạn đã đăng ký trên ktsp.vn</p>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="fa fa-times-circle"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="phone-label">Số điện thoại</label>
+                <input type="text" class="form-control" id="phone-label" placeholder="Số điện thoại của bạn">
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">LẤY LẠI MẬT KHẨU</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal Fogot Password -->
+
+    <!-- Modal Register -->
+    <div class="modal fade modal-popup" id="modal-register" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">ĐĂNG KÝ</h5>
+            <p class="modal-desc">Dễ dàng truy cập lịch sử đơn hàng, lưu sản phẩm yêu thích, xem giỏ hàng, nhận ưu đãi và nhiều hơn nữa.</p>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="fa fa-times-circle"></i>
+            </button>
+          </div>
+          <div class="modal-body modal-popup__register">
+            <form>
+              <div class="form-group">
+                <label for="name-label">Họ tên <span class="text-red">(*)</span></label>
+                <input type="text" class="form-control" id="name-label" placeholder="Họ và tên">
+              </div>
+              <div class="form-group">
+                <label for="name-label">Email</label>
+                <input type="text" class="form-control" id="name-label" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label for="name-label">Số điện thoại <span class="text-red">(*)</span></label>
+                <input type="text" class="form-control" id="name-label" placeholder="Số điện thoại">
+              </div>
+              <div class="form-group">
+                <label for="password-label">Mật khẩu <span class="text-red">(*)</span></label>
+                <input type="password" class="form-control" id="password-label" placeholder="Nhập mật khẩu">
+              </div>
+              <div class="form-group">
+                <label for="password-label">Nhập lại mật khẩu <span class="text-red">(*)</span></label>
+                <input type="password" class="form-control" id="password-label" placeholder="Xác nhận mật khẩu">
+              </div>
+              <div class="rules">
+                Bằng việc đăng kí, bạn đã đồng ý với Ktsp.vn về <a href="#">Điều khoản dịch vụ</a> & <a href="#">chính sách bảo mật</a>.
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Đăng ký</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p>Bạn đã có tài khoản tại ktsp.vn?</p>
+            <button type="button" class="btn btn-outline-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#modal-login">Đăng nhập</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal Register -->
+
+    <!-- Header bottom -->
+    <div class="header__bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="header__bottom--main">
+              <div id="header__menu" class="header__menu-mobile">
+                <span href="/"><i class="fas fa-bars"></i></span>
+                <div class="header__menu-mobile__expand">
+                  <ul class="header__menu-mobile__list">
+                    <li class="header__menu-mobile__item">
+                      <a href="#" class="header__menu-mobile__item__avatar">
+                        <img src="assets/images/avatar_default.png">
+                        <div class="header__menu-mobile__item__avatar__content">
+                          <label>Đăng nhập</label>
+                          <div style="font-size: 10px">Nhận nhiều ưu đãi hơn</div>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                      </a>
+                    </li>
+                    <li class="header__menu-mobile__item--two">
+                      <a href="#">
+                        <svg stroke="#757575" fill="#757575" stroke-width="0" viewBox="0 0 24 24" size="25" height="25" width="25" xmlns="http://www.w3.org/2000/svg"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
+                        Trang chủ
+                      </a>
+                    </li>
+                    <li class="header__menu-mobile__item--two">
+                      <a href="#">
+                        <svg stroke="#757575" fill="#757575" stroke-width="0" viewBox="0 0 24 24" size="25" height="25" width="25" xmlns="http://www.w3.org/2000/svg"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"></path></svg>
+                        Danh sách ngành hàng
+                      </a>
+                    </li>
+                    <li class="header__menu-mobile__item--two">
+                      <a href="#">
+                        <svg stroke="#757575" fill="#757575" stroke-width="0" viewBox="0 0 24 24" size="25" height="25" width="25" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg>
+                        Quản lý tài khoản
+                      </a>
+                    </li>
+                    <li class="header__menu-mobile__item--two">
+                      <a href="#">
+                        <svg stroke="#757575" fill="#757575" stroke-width="0" viewBox="0 0 24 24" size="25" height="25" width="25" xmlns="http://www.w3.org/2000/svg"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"></path></svg>
+                        Thông báo
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="header__menu-mobile__sub-head">KHUYẾN MÃI HOT</div>
+                  <ul class="header__menu-mobile__list">
+                    <li class="header__menu-mobile__item--two">
+                      <a href="#">KTSP Deal</a>
+                    </li>
+                    <li class="header__menu-mobile__item--two">
+                      <a href="#">Phiếu quà tặng</a>
+                    </li>
+                    <li class="header__menu-mobile__item--two">
+                      <a href="#">Ưu đãi cho chủ thẻ ngân hàng</a>
+                    </li>
+                  </ul>
+                  <div class="header__menu-mobile__sub-head">HỖ TRỢ</div>
+                  <ul class="header__menu-mobile__list">
+                    <li class="header__menu-mobile__item--two">
+                      <a href="#">KTSP Deal</a>
+                    </li>
+                    <li class="header__menu-mobile__item--two">
+                      <a href="#">Phiếu quà tặng</a>
+                    </li>
+                    <li class="header__menu-mobile__item--two">
+                      <a href="tel:0762461166"><span class="hot-line">HOTLINE:<strong>076.246.1166</strong>(1000đ/phút)</span></a>
+                    </li>
+                    <li class="header__menu-mobile__item--two">
+                      <a class="support" href="#">
+                        Hỗ trợ khách hàng
+                        <svg stroke="#757575" fill="#757575" stroke-width="0" viewBox="0 0 24 24" size="20" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header__bottom__ovelay"></div>
+              <div class="header__logo">
+                <a href="#">
+                  <img src="assets/images/logo.png" alt="">
+                </a>
+              </div>
+              <div class="header__search--main">
+                <div class="header__search">
+                  <input type="search" id="form1" class="header__search__input" placeholder="Tìm sản phẩm, danh mục hay thương hiệu" />
+                  <button type="button" class="header__search__button">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+                <div class="header__tag">
+                  <ul>
+                    <li><a href="#">Lock&lock</a></li>
+                    <li><a href="#">Trái cây chính vụ</a></li>
+                    <li><a href="#">Nông sản</a></li>
+                    <li><a href="#">Đồ gia dụng</a></li>
+                    <li><a href="#">Mỹ phẩm</a></li>
+                    <li><a href="#">Đồ điện tử</a></li>
+                    <li><a href="#">Thời trang nam/nữ</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header__cart">
+                <a href="#">
+                  <img src="assets/images/cart-icon.svg" class="header__cart__icon">
+                  <span class="header__cart__total">2</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Header bottom -->
+
+    <!-- Header Menu -->
+    <div class="header__menu">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="header__menu__list">
+              <!-- Menu ngang -->
+              <ul>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-bars"></i> DANH MỤC SẢN PHẨM <i class="fa fa-angle-down"></i>
+                  </a>
+                  <!-- Menu cấp 1 -->
+                  <div class="header__menu__list__sub">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <img class="header__menu__list__sub--icon" src="assets/images/icon-menu/san-dac-san.png" alt="">
+                          Sàn đặc sản
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                        <!-- Menu cấp 2 -->
+                        <div class="header__menu__list__sub-2">
+                          <ul>
+                            <li><a href="#">Đặc sản miền Bắc</a></li>
+                            <li><a href="#">Đặc sản miền Trung</a></li>
+                            <li><a href="#">Đặc sản miền Tây</a></li>
+                            <li><a href="#">Đặc sản Nam Bộ</a></li>
+                            <li><a href="#">Đặc sản Tây Nguyên</a></li>
+                            <li><a href="#">Đặc sản trái cây</a></li>
+                          </ul>
+                        </div>
+                        <!-- Hết menu cấp 2 -->
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img class="header__menu__list__sub--icon" src="assets/images/icon-menu/bach-hoa.png" alt="">
+                          Bách hóa
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img class="header__menu__list__sub--icon" src="assets/images/icon-menu/thiet-bi-dien-tu.png" alt="">
+                          Thiết bị điện tử
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img class="header__menu__list__sub--icon" src="assets/images/icon-menu/me-va-be.png" alt="">
+                          Mẹ & Bé
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img class="header__menu__list__sub--icon" src="assets/images/icon-menu/me-va-be.png" alt="">
+                          Mẹ & Bé
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img class="header__menu__list__sub--icon" src="assets/images/icon-menu/me-va-be.png" alt="">
+                          Mẹ & Bé
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img class="header__menu__list__sub--icon" src="assets/images/icon-menu/me-va-be.png" alt="">
+                          Mẹ & Bé
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img class="header__menu__list__sub--icon" src="assets/images/icon-menu/me-va-be.png" alt="">
+                          Mẹ & Bé
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img class="header__menu__list__sub--icon" src="assets/images/icon-menu/me-va-be.png" alt="">
+                          Mẹ & Bé
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Hết menu cấp 1 -->
+                </li>
+                <li><a href="#">HÀNG TIÊU DÙNG</a></li>
+                <li><a href="#">DƯỢC – MỸ PHẨM</a></li>
+                <li><a href="#">NÔNG SẢN</a></li>
+                <li><a href="#">THỰC PHẨM CHẾ BIẾN</a></li>
+                <li><a href="#">CƠ KHÍ – XÂY DỰNG</a></li>
+                <li><a href="#">ĐIỆN – ĐIỆN TỬ</a></li>
+              </ul>
+              <!-- Hết menu ngang -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Header Menu -->
+  </div>
+  <!-- End Header -->
+
+  <!-- page cart -->
+  <div class="page-cart">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="page-cart--main">
+            <div class="page-cart__product-buy">
+              <label class="page-cart__product-buy__title">GIỎ HÀNG</label>
+              <span class="page-cart__product-buy__count">(2)</span>
+            </div>
+            <div class="page-cart__main">
+              <!-- Danh sách các sản phẩm trong giỏ hàng -->
+              <div class="page-cart__inner">
+                <ul class="page-cart__inner__products">
+                  <!-- Item -->
+                  <li class="page-cart__inner__product">
+                    <div class="page-cart__inner__product__shop">
+                      <a href="#">
+                        <img src="assets/images/avatar_shop.jpg" alt="">
+                        <span>Thủy Dược liệu Tây bắc</span>
+                      </a>
+                    </div>
+                    <div class="page-cart__inner__product__item">
+                      <div class="page-cart__inner__product__item__img">
+                        <img src="assets/images/product-detail/1.jpg" alt="">
+                      </div>
+                      <div class="page-cart__inner__product__item__content">
+                        <div class="page-cart__inner__product__item__name">
+                          <p>500gr bột cacao nguyên chất</p>
+                          <span class="product__delete">Xóa</span>
+                        </div>
+                        <div class="page-cart__inner__product__item__price">
+                          <div class="page-cart__inner__product__item__price-new">
+                            160,000<sup>đ</sup>
+                          </div>
+                          <div class="page-cart__inner__product__item__price-old">
+                            <span class="discount-price">200,000<sup>đ</sup></span>
+                            <span class="seperate">|</span>
+                            <span class="discount-percent">20%</span>
+                          </div>
+                        </div>
+                        <div class="page-cart__inner__product__item__quantity">
+                          <div class="number-input">
+                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"><img src="assets/images/minus.png" alt="" /></button>
+                            <input class="quantity" min="1" name="quantity" value="1" type="number">
+                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"><img src="assets/images/plus.png" alt="" /></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Item -->
+                  <li class="page-cart__inner__product">
+                    <div class="page-cart__inner__product__shop">
+                      <a href="#">
+                        <img src="assets/images/avatar_shop.jpg" alt="">
+                        <span>Thủy Dược liệu Tây bắc</span>
+                      </a>
+                    </div>
+                    <div class="page-cart__inner__product__item">
+                      <div class="page-cart__inner__product__item__img">
+                        <img src="assets/images/product-detail/2.jpg" alt="">
+                      </div>
+                      <div class="page-cart__inner__product__item__content">
+                        <div class="page-cart__inner__product__item__name">
+                          <p>500gr bột cacao nguyên chất</p>
+                          <span class="product__delete">Xóa</span>
+                        </div>
+                        <div class="page-cart__inner__product__item__price">
+                          <div class="page-cart__inner__product__item__price-new">
+                            160,000<sup>đ</sup>
+                          </div>
+                          <div class="page-cart__inner__product__item__price-old">
+                            <span class="discount-price">200,000<sup>đ</sup></span>
+                            <span class="seperate">|</span>
+                            <span class="discount-percent">20%</span>
+                          </div>
+                        </div>
+                        <div class="page-cart__inner__product__item__quantity">
+                          <div class="number-input">
+                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"><img src="assets/images/minus.png" alt="" /></button>
+                            <input class="quantity" min="1" name="quantity" value="1" type="number">
+                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"><img src="assets/images/plus.png" alt="" /></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+              <!-- Hết Danh sách các sản phẩm trong giỏ hàng -->
+
+              <!-- Tổng chi phí -->
+              <div class="page-cart__total-prices">
+                <div class="cart-prices">
+                  <div class="prices">
+                    <div class="prices__items">
+                      <span class="prices__text">Tổng (2 sản phẩm)</span>
+                    </div>
+                    <div class="prices__total">
+                      <span>Tổng tiền hàng</span>
+                      <div class="prices__value--final">đ480,000</div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="cart__submit">Tiến hành đặt hàng</a>
+              </div>
+              <!-- Hết Tổng chi phí -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end page cart -->
+
+  <!-- new-letter -->
+  <div class="new-letter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="new-letter__box">
+            <div class="new-letter__logo">
+              <a href="#">
+                <img src="assets/images/logo_ft.png" alt="">
+              </a>
+            </div>
+            <div class="new-letter__form">
+              <div class="new-letter__form__left">
+                <div class="new-letter__form__text">Bạn đã sẵn sàng để nhận ưu đãi dành riêng cho khách hàng mới từ Ktsp.vn?</div>
+              </div>
+              <div class="new-letter__form__right">
+                <div class="new-letter__form__box">
+                  <input type="text" class="new-letter__form__input" placeholder="Nhập email của bạn tại đây...">
+                  <input type="submit" class="new-letter__form__button" value="Đăng ký">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end new-letter -->
+
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="footer__box">
+            <div class="footer__title">VỀ CHÚNG TÔI</div>
+            <ul class="footer__box__list">
+              <li><a href="#">Giới thiệu về Viettel</a></li>
+              <li><a href="#">Giới thiệu về Ktsp.vn</a></li>
+              <li><a href="#">Cơ hội hợp tác</a></li>
+              <li><a href="#">Quy chế hoạt động</a></li>
+              <li><a href="#">Quy định đóng gói hàng hóa</a></li>
+              <li><a href="#">Quy định hàng hóa cấm gửi</a></li>
+              <li><a href="#">Điều khoản sử dụng</a></li>
+              <li><a href="#">Chính sách bảo mật</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer__box">
+            <div class="footer__title">CHỦ ĐỀ HỖ TRỢ</div>
+            <ul class="footer__box__list">
+              <li><a href="#">Hướng dẫn đặt hàng</a></li>
+              <li><a href="#">Bán hàng cùng Ktsp.vn</a></li>
+              <li><a href="#">Quy trình mua bán</a></li>
+              <li><a href="#">Giải quyết khiếu nại</a></li>
+              <li><a href="#">Chính sách đổi trả hàng</a></li>
+              <li><a href="#">Chính sách thanh toán</a></li>
+              <li><a href="#">Chính sách vận chuyển</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer__box">
+            <div class="footer__title">KẾT NỐI VỚI CHÚNG TÔI</div>
+            <ul class="footer__box__list">
+              <li>
+                <p>
+                  <strong>Địa chỉ<br></strong>
+                  Số 30 Trung Liệt, Quận Đống Đa - TP. Hà Nội
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Hotline<br></strong>
+                  076.246.1166
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Email<br></strong>
+                  <a href="#">info@ktsp.vn</a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer__box">
+            <div class="footer__title">MẪU HỢP ĐỒNG CHO NHÀ CUNG CẤP</div>
+            <div class="footer_box_button">
+              <a href="#" target="_blank">
+                <i class="fa fa-download"></i>
+                Tải file về
+              </a>
+            </div>
+            <div class="footer__title">TẢI APP KTSP.VN</div>
+            <div class="footer__box__app">
+              <a href="#" target="_blank">
+                <img src="assets/images/icon_apple-store.png" alt="">
+              </a>
+            </div>
+            <div class="footer__box__app">
+              <a href="#" target="_blank">
+                <img src="assets/images/icon_chplay.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="copyright__bct">
+            <a href="#" target="_blank">
+              <img src="assets/images/bct.png" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="copyright__info">
+            <p>
+              Mã số doanh nghiệp: 0107603000 do Sở Kế hoạch và Đầu tư TP. Hà Nội cấp lần đầu ngày 19/10/2016.
+              <br /> Trụ sở chính: Số 30 Trung Liệt, Quận Đống Đa, Hà Nội, Việt Nam.
+              <br /> © 2019 Bản quyền thuộc Công ty cổ phần công nghệ và khoa học Bảo An
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Fontawesome -->
+  <script src="assets/js/font-awesome.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- My JS -->
+  <script src="assets/js/script.js" charset="utf-8"></script>
+</body>
+
+</html>
