@@ -4330,6 +4330,26 @@ a:hover {
   background: #0a64b4;
 }
 
+.order-item__no-product {
+  background: #fff;
+  margin-top: 15px;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.order-item__no-product img {
+  height: 100px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.order-item__no-product p {
+  font-size: 18px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, .8);
+  margin-bottom: 0;
+}
+
 @media (max-width: 991px) {
   .order-list__tabs {
     overflow-x: scroll;
