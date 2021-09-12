@@ -151,3 +151,26 @@ var js_gallery_user_slide = new Swiper(".js-gallery-user-slide", {
     },
   },
 });
+
+// Load More Product
+const buttonLoadMore = document.querySelector('#buttonLoadMore');
+let productShowBeforeClick = 10;
+let productShowAfterClick = 3;
+const elementList = [...document.querySelectorAll('.js-product-load-more .products-grid__item')];
+for (let i = 0; i < productShowBeforeClick; i++) {
+  if (elementList[i]) {
+    elementList[i].style.display = 'block';
+  }
+}
+buttonLoadMore.addEventListener('click', (e) => {
+  for (let i = productShowBeforeClick; i < productShowBeforeClick + productShowAfterClick; i++) {
+    if (elementList[i]) {
+      elementList[i].style.display = 'block';
+    }
+  }
+  productShowBeforeClick += productShowAfterClick;
+  // Load more button will be hidden after list fully loaded
+  if (productShowBeforeClick >= elementList.length) {
+    event.target.style.display = 'none';
+  }
+})
