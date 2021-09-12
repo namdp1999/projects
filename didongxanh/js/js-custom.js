@@ -115,3 +115,39 @@ var js_products_slide = new Swiper(".js-products-slide", {
     },
   },
 });
+
+// News Slide
+var js_news_slide = new Swiper(".js-news-slide", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 2,
+    },
+    1120: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+// Gallery Users Slide
+var js_gallery_user_slide = new Swiper(".js-gallery-user-slide", {
+  slidesPerView: 2,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 4,
+    },
+    1120: {
+      slidesPerView: 5,
+    },
+  },
+});
