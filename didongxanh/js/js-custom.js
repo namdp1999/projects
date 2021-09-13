@@ -116,6 +116,24 @@ var js_products_slide = new Swiper(".js-products-slide", {
   },
 });
 
+// Products Combo
+var js_products_combo = new Swiper(".js-products-combo", {
+  slidesPerView: 2,
+  spaceBetween: 40,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 2,
+    },
+    1120: {
+      slidesPerView: 3,
+    },
+  },
+});
+
 // News Slide
 var js_news_slide = new Swiper(".js-news-slide", {
   slidesPerView: 1,
@@ -152,6 +170,86 @@ var js_gallery_user_slide = new Swiper(".js-gallery-user-slide", {
   },
 });
 
+// Product Detail Page
+
+// Gallery Product
+var js_gallery_product_1 = new Swiper(".js-gallery-product-1", {
+  loop: false,
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+var js_gallery_product_2 = new Swiper(".js-gallery-product-2", {
+  loop: false,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  thumbs: {
+    swiper: js_gallery_product_1,
+  },
+});
+
+// Gallery Product Modal
+var js_gallery_product_modal_1 = new Swiper(".js-gallery-product-modal-1", {
+  loop: false,
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    992: {
+      slidesPerView: 6,
+    },
+    1120: {
+      slidesPerView: 8,
+    },
+  },
+});
+var js_gallery_product_modal_2 = new Swiper(".js-gallery-product-modal-2", {
+  loop: false,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  thumbs: {
+    swiper: js_gallery_product_modal_1,
+  },
+});
+
+// Product Amount
+$('#minus').on('click', function(e) {
+  e.preventDefault();
+  var $this = $(this);
+  var $input = $this.closest('.product-detail-head__amount-box').find('#quantity');
+  var value = parseInt($input.val());
+  if (value > 1) {
+    value = value - 1;
+  }
+  $input.val(value);
+});
+$('#plus').on('click', function(e) {
+  e.preventDefault();
+  var $this = $(this);
+  var $input = $this.closest('.product-detail-head__amount-box').find('#quantity');
+  var value = parseInt($input.val());
+  value = value + 1;
+  $input.val(value);
+});
+
+// End Product Detail Page
+
 // Load More Product
 const buttonLoadMore = document.querySelector('#buttonLoadMore');
 let productShowBeforeClick = 10;
@@ -173,4 +271,5 @@ buttonLoadMore.addEventListener('click', (e) => {
   if (productShowBeforeClick >= elementList.length) {
     event.target.style.display = 'none';
   }
-})
+});
+// End Load More Product
