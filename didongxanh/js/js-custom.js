@@ -125,7 +125,7 @@ var js_products_slide = new Swiper(".js-products-slide", {
     992: {
       slidesPerView: 4,
     },
-    1120: {
+    1200: {
       slidesPerView: 5,
     },
   },
@@ -141,9 +141,6 @@ var js_products_combo = new Swiper(".js-products-combo", {
   },
   breakpoints: {
     992: {
-      slidesPerView: 2,
-    },
-    1120: {
       slidesPerView: 3,
     },
   },
@@ -161,7 +158,7 @@ var js_products_segment = new Swiper(".js-products-segment", {
     992: {
       slidesPerView: 3,
     },
-    1120: {
+    1200: {
       slidesPerView: 4,
     },
   },
