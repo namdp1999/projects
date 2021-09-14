@@ -4,9 +4,24 @@ $(".header__search .find-product")
     $(".search-suggest").addClass("show");
     $(".search-suggest__bg").addClass("show");
   })
-  .blur(function () {
+$(".header__search .search-suggest__bg")
+  .click(function () {
     $(".search-suggest").removeClass("show");
     $(".search-suggest__bg").removeClass("show");
+  });
+
+// Read More, Read Less Button
+$("#viewMoreContent")
+  .click(function () {
+    $(".product-detail-main__content-text").addClass("show-more");
+    $("#viewMoreContent").hide();
+    $("#viewLessContent").show();
+  })
+$("#viewLessContent")
+  .click(function () {
+    $(".product-detail-main__content-text").removeClass("show-more");
+    $("#viewMoreContent").show();
+    $("#viewLessContent").hide();
   });
 
 // Menu mobile
@@ -130,6 +145,24 @@ var js_products_combo = new Swiper(".js-products-combo", {
     },
     1120: {
       slidesPerView: 3,
+    },
+  },
+});
+
+// Products Segment
+var js_products_segment = new Swiper(".js-products-segment", {
+  slidesPerView: 2,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 3,
+    },
+    1120: {
+      slidesPerView: 4,
     },
   },
 });
