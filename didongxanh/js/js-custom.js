@@ -259,23 +259,11 @@ var js_gallery_product_modal_2 = new Swiper(".js-gallery-product-modal-2", {
 });
 
 // Product Amount
-$('#minus').on('click', function(e) {
-  e.preventDefault();
-  var $this = $(this);
-  var $input = $this.closest('.product-detail-head__amount-box').find('#quantity');
-  var value = parseInt($input.val());
-  if (value > 1) {
-    value = value - 1;
-  }
-  $input.val(value);
+$('.btn-add').click(function () {
+  $(this).prev().val(+$(this).prev().val() + 1);
 });
-$('#plus').on('click', function(e) {
-  e.preventDefault();
-  var $this = $(this);
-  var $input = $this.closest('.product-detail-head__amount-box').find('#quantity');
-  var value = parseInt($input.val());
-  value = value + 1;
-  $input.val(value);
+$('.btn-sub').click(function () {
+  if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
 });
 
 // End Product Detail Page
