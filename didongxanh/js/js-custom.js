@@ -86,6 +86,27 @@ var js_banner_slide = new Swiper(".js-banner-slide", {
   },
 });
 
+// Video Slide
+var js_video_slide = new Swiper(".js-video-slide", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 2,
+    },
+  },
+});
+
 // Flash Sales
 var js_flash_sales = new Swiper(".js-flash-sales", {
   slidesPerView: 1,
