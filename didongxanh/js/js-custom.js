@@ -33,6 +33,10 @@ $(".menu-mobile__ovelay").click(function () {
   $(".menu-mobile__expand").removeClass("show");
   $(".menu-mobile__ovelay").removeClass("show");
 });
+$(".menu-mobile__cate-item").click(function () {
+  $('.menu-mobile__cate-sub.active').removeClass('active');
+  $(this).toggleClass('active');
+});
 
 // Slider Home
 var js_slider_home_1 = new Swiper(".js-slider-home-1", {
