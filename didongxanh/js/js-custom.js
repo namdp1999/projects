@@ -38,6 +38,12 @@ $(".menu-mobile__cate-item").click(function () {
   $(this).toggleClass('active');
 });
 
+// Blog Category Vertical
+$(".blog-cate-vertical__item").click(function () {
+  $('.blog-cate-vertical__sub.active').removeClass('active');
+  $(this).toggleClass('active');
+});
+
 // Slider Home
 var js_slider_home_1 = new Swiper(".js-slider-home-1", {
   loop: false,
