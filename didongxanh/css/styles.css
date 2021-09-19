@@ -1566,6 +1566,15 @@ b, strong {
   margin-left: 6px;
 }
 
+.product-item-grid__check {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.product-item-grid__check .label-checkbox .checkmark {
+  border-radius: 50%;
+}
+
 @media (max-width: 767px) {
   .product-item-grid__title {
     font-size: 14px;
@@ -3814,7 +3823,7 @@ b, strong {
 }
 
 .products-combo__list {
-  width: 78%;
+  width: 76%;
   border-right: 1px solid #CACACA;
 }
 
@@ -3834,8 +3843,16 @@ b, strong {
 }
 
 .products-combo__total {
-  width: 22%;
+  width: 24%;
   text-align: center;
+}
+
+.products-combo__total-price-old {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--gray);
+  text-decoration: line-through;
+  margin-bottom: 0;
 }
 
 .products-combo__total-price {
@@ -4113,6 +4130,10 @@ b, strong {
 
   .products-combo__total {
     width: 25%;
+  }
+
+  .products-combo__total-price-old {
+    font-size: 22px;
   }
 
   .products-combo__total-price {
