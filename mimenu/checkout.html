@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiMenu</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/line-awesome/css/line-awesome.min.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- App -->
+  <div class="app">
+
+    <div class="checkout-header">
+      <a href="index.html" class="checkout-header__back">
+        <i class="las la-angle-left"></i>
+      </a>
+      <h2 class="checkout-header__title">Xác nhận đơn hàng</h2>
+    </div>
+    
+    <!-- Checkout -->
+    <div class="checkout-main">
+      <div class="checkout-products">
+        <h3 class="checkout-products__title">Thông tin sản phẩm</h3>
+        <div class="checkout-products__list">
+          <div class="checkout-products__item">
+            <div class="checkout-products__item-img">
+              <img src="assets/images/products/1.jpg" alt="Set ấm Trà mạn" />
+            </div>
+            <div class="checkout-products__item-content">
+              <h4 class="checkout-products__item-title">
+                Set ấm Trà mạn
+              </h4>
+              <div class="checkout-products__item-value">
+                3 x 1.500.000đ
+              </div>
+            </div>
+          </div>
+          <div class="checkout-products__item">
+            <div class="checkout-products__item-img">
+              <img src="assets/images/products/1.jpg" alt="Set ấm Trà mạn" />
+            </div>
+            <div class="checkout-products__item-content">
+              <h4 class="checkout-products__item-title">
+                Set ấm Trà mạn
+              </h4>
+              <div class="checkout-products__item-value">
+                3 x 1.500.000đ
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="checkout-shipping">
+        <h3 class="checkout-shipping__title">Hình thức nhận hàng <span>*</span></h3>
+        <div class="checkout-shipping__options">
+          <div class="checkout-shipping__options-item button-get-store">
+            <div class="checkout-shipping__options-item-content">
+              <img src="assets/images/icons/tu-lay-hang.svg" alt="Tự lấy hàng">
+              <span>Tự lấy hàng</span>
+            </div>
+            <div class="checkout-shipping__options-item-radio">
+              <div class="options-item-radio__outer">
+                <div class="options-item-radio__inner"></div>
+              </div>
+            </div>
+          </div>
+          <div class="checkout-shipping__options-item button-get-home">
+            <div class="checkout-shipping__options-item-content">
+              <img src="assets/images/icons/giao-tan-noi.svg" alt="Giao tận nơi">
+              <span>Giao tận nơi</span>
+            </div>
+            <div class="checkout-shipping__options-item-radio">
+              <div class="options-item-radio__outer">
+                <div class="options-item-radio__inner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="checkout-shipping__contact">
+          <div class="checkout-shipping__contact-seller">
+            <i class="las la-map-marker-alt"></i>
+            <span>
+              <label>Địa chỉ cửa hàng:</label> Văn Quán Phường Phúc La, Quận Hà Đông, Thành Phố Hà Nội
+            </span>
+          </div>
+          <div class="checkout-shipping__contact-name">
+            <i class="las la-user"></i>
+            <span>Đặng Phương Nam</span>
+          </div>
+          <div class="checkout-shipping__contact-phone">
+            <i class="las la-phone-volume"></i>
+            <span>0123456789</span>
+          </div>
+          <div class="checkout-shipping__contact-address">
+            <i class="las la-map-marker-alt"></i>
+            <span>123 đường ABC</span>
+          </div>
+        </div>
+      </div>
+      <div class="checkout-summary">
+        <h3 class="checkout-summary__title">
+          Thông tin thanh toán
+        </h3>
+        <div class="checkout-summary__content">
+          <div class="checkout-promotion">
+            <label>Khuyến mại</label>
+            <div class="checkout-promotion__button">
+              <i class="las la-ticket-alt"></i>
+              <span>Chọn khuyến mại</span>
+              <i class="las la-angle-right"></i>
+            </div>
+          </div>
+          <div class="checkout-original">
+            <label>Tổng 3 sản phẩm</label>
+            <span>4.500.000đ</span>
+          </div>
+          <div class="checkout-final">
+            <label>Tổng cộng</label>
+            <span>4.500.000đ</span>
+          </div>
+        </div>
+      </div>
+      <div class="checkout-method">
+        <h3 class="checkout-method__title">
+          Phương thức thanh toán
+        </h3>
+        <div class="checkout-method__payment">
+          <div class="checkout-method__item">
+            <img src="assets/images/icons/ship-cod.svg" alt="Icon Ship COD">
+            <div class="checkout-method__item-content">
+              <h4>Thanh toán tiền mặt - COD</h4>
+              <small>Nhận hàng - trả tiền</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="checkout-note">
+        <input type="text" placeholder="Ghi chú" />
+      </div>
+    </div>
+    <!-- End Checkout -->
+
+    <!-- Footer -->
+    <div class="checkout-footer">
+      <a href="dat-hang-thanh-cong.html" class="checkout-footer__order">
+        Đặt hàng 4.500.000đ
+      </a>
+    </div>
+    <!-- End Footer -->
+
+    <!-- Modal Tự nhận hàng -->
+    <div class="bottom-modal modal-get-store">
+      <div class="bottom-modal__box">
+        <div class="bottom-modal__head get-store-close">
+          <button class="bottom-modal__close"><i class="las la-times"></i></button>
+          <div class="bottom-modal__title">
+            <h3>Hình thức nhận hàng</h3>
+          </div>
+        </div>
+        <div class="bottom-modal__content">
+          <div class="checkout-shipping__options">
+            <div class="checkout-shipping__options-item active button-get-store">
+              <div class="checkout-shipping__options-item-content">
+                <img src="assets/images/icons/tu-lay-hang.svg" alt="Tự lấy hàng">
+                <span>Tự lấy hàng</span>
+              </div>
+              <div class="checkout-shipping__options-item-radio">
+                <div class="options-item-radio__outer">
+                  <div class="options-item-radio__inner"></div>
+                </div>
+              </div>
+            </div>
+            <div class="checkout-shipping__options-item button-get-home">
+              <div class="checkout-shipping__options-item-content">
+                <img src="assets/images/icons/giao-tan-noi.svg" alt="Giao tận nơi">
+                <span>Giao tận nơi</span>
+              </div>
+              <div class="checkout-shipping__options-item-radio">
+                <div class="options-item-radio__outer">
+                  <div class="options-item-radio__inner"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-get__contact-seller">
+            <i class="las la-map-marker-alt"></i>
+            <span>
+              <label>Địa chỉ cửa hàng:</label> Văn Quán Phường Phúc La, Quận Hà Đông, Thành Phố Hà Nội
+            </span>
+          </div>
+          <div class="modal-get__form modal-get-store__form">
+            <h3>Thông tin người nhận</h3>
+            <p>Bạn cần cung cấp các thông tin sau để chủ tiệm xác minh và giao đúng hàng nhé.</p>
+            <input type="text" class="fullname" placeholder="Tên người nhận *" required />
+            <input type="text" class="phone" placeholder="Số điện thoại *" required />
+          </div>
+        </div>
+        <div class="bottom-modal__footer">
+          <button class="button-confirm">Xác nhận</button>
+        </div>
+      </div>
+    </div>
+    <!-- Hết Modal Tự nhận hàng -->
+
+    <!-- Modal Giao tận nơi -->
+    <div class="bottom-modal modal-get-home">
+      <div class="bottom-modal__box">
+        <div class="bottom-modal__head get-home-close">
+          <button class="bottom-modal__close"><i class="las la-times"></i></button>
+          <div class="bottom-modal__title">
+            <h3>Hình thức nhận hàng</h3>
+          </div>
+        </div>
+        <div class="bottom-modal__content">
+          <div class="checkout-shipping__options">
+            <div class="checkout-shipping__options-item button-get-store">
+              <div class="checkout-shipping__options-item-content">
+                <img src="assets/images/icons/tu-lay-hang.svg" alt="Tự lấy hàng">
+                <span>Tự lấy hàng</span>
+              </div>
+              <div class="checkout-shipping__options-item-radio">
+                <div class="options-item-radio__outer">
+                  <div class="options-item-radio__inner"></div>
+                </div>
+              </div>
+            </div>
+            <div class="checkout-shipping__options-item active button-get-home">
+              <div class="checkout-shipping__options-item-content">
+                <img src="assets/images/icons/giao-tan-noi.svg" alt="Giao tận nơi">
+                <span>Giao tận nơi</span>
+              </div>
+              <div class="checkout-shipping__options-item-radio">
+                <div class="options-item-radio__outer">
+                  <div class="options-item-radio__inner"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-get__contact-seller">
+            <i class="las la-map-marker-alt"></i>
+            <span>
+              <label>Địa chỉ cửa hàng:</label> Văn Quán Phường Phúc La, Quận Hà Đông, Thành Phố Hà Nội
+            </span>
+          </div>
+          <div class="modal-get__form modal-get-home__form">
+            <h3>Thông tin người nhận</h3>
+            <p>Bạn cần cung cấp các thông tin sau để chủ tiệm xác minh và giao đúng hàng nhé.</p>
+            <input type="text" class="fullname" placeholder="Tên người nhận *" required />
+            <input type="text" class="phone" placeholder="Số điện thoại *" required />
+            <input type="text" class="address" placeholder="Địa chỉ *" required />
+          </div>
+        </div>
+        <div class="bottom-modal__footer">
+          <button class="button-confirm">Xác nhận</button>
+        </div>
+      </div>
+    </div>
+    <!-- Hết Modal Giao tận nơi -->
+
+  </div>
+  <!-- End App -->
+
+  <script src="assets/js/jquery-3.6.0.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

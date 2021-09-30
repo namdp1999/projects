@@ -84,3 +84,21 @@ $(".note-cart-modal .note-close").click(function () {
     $(".bottom-modal__box").addClass("open");
 });
 // End Note Cart Modal
+
+// Get Store Modal
+$(".button-get-store").click(function () {
+    $(".modal-get-store").addClass("open");
+    $(".bottom-modal__box").addClass("open");
+    $(".modal-get-home").removeClass("open");
+    $(".modal-get-home .bottom-modal__box").removeClass("open");
+});
+// End Get Store Modal
+
+// Get Home Modal
+$(".button-get-home").click(function () {
+    $(".modal-get-home").addClass("open");
+    $(".bottom-modal__box").addClass("open");
+    $(".modal-get-store").removeClass("open");
+    $(".modal-get-store .bottom-modal__box").removeClass("open");
+});
+// End Get Home Modal
