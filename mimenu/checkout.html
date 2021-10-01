@@ -83,21 +83,21 @@
           </div>
         </div>
         <div class="checkout-shipping__contact">
-          <div class="checkout-shipping__contact-seller">
+          <div class="checkout-shipping__contact-seller d-none">
             <i class="las la-map-marker-alt"></i>
             <span>
               <label>Địa chỉ cửa hàng:</label> Văn Quán Phường Phúc La, Quận Hà Đông, Thành Phố Hà Nội
             </span>
           </div>
-          <div class="checkout-shipping__contact-name">
+          <div class="checkout-shipping__contact-name d-none">
             <i class="las la-user"></i>
             <span>Đặng Phương Nam</span>
           </div>
-          <div class="checkout-shipping__contact-phone">
+          <div class="checkout-shipping__contact-phone d-none">
             <i class="las la-phone-volume"></i>
             <span>0123456789</span>
           </div>
-          <div class="checkout-shipping__contact-address">
+          <div class="checkout-shipping__contact-address d-none">
             <i class="las la-map-marker-alt"></i>
             <span>123 đường ABC</span>
           </div>
@@ -197,12 +197,18 @@
           <div class="modal-get__form modal-get-store__form">
             <h3>Thông tin người nhận</h3>
             <p>Bạn cần cung cấp các thông tin sau để chủ tiệm xác minh và giao đúng hàng nhé.</p>
-            <input type="text" class="fullname" placeholder="Tên người nhận *" required />
-            <input type="text" class="phone" placeholder="Số điện thoại *" required />
+            <form id="form-get-store">
+              <div class="bottom-modal__input">
+                <input type="text" name="fullname" placeholder="Tên người nhận *" required />
+              </div>
+              <div class="bottom-modal__input">
+                <input type="text" name="phone" placeholder="Số điện thoại *" required />
+              </div>
+              <div class="bottom-modal__footer">
+                <button type="submit" class="button-confirm">Xác nhận</button>
+              </div>
+            </form>
           </div>
-        </div>
-        <div class="bottom-modal__footer">
-          <button class="button-confirm">Xác nhận</button>
         </div>
       </div>
     </div>
@@ -251,22 +257,54 @@
           <div class="modal-get__form modal-get-home__form">
             <h3>Thông tin người nhận</h3>
             <p>Bạn cần cung cấp các thông tin sau để chủ tiệm xác minh và giao đúng hàng nhé.</p>
-            <input type="text" class="fullname" placeholder="Tên người nhận *" required />
-            <input type="text" class="phone" placeholder="Số điện thoại *" required />
-            <input type="text" class="address" placeholder="Địa chỉ *" required />
+            <form id="form-get-home">
+              <div class="bottom-modal__input">
+                <input type="text" name="fullname" placeholder="Tên người nhận *" required />
+              </div>
+              <div class="bottom-modal__input">
+                <input type="text" name="phone" placeholder="Số điện thoại *" required />
+              </div>
+              <div class="bottom-modal__input">
+                <input type="text" name="address" placeholder="Địa chỉ *" required />
+              </div>
+              <div class="bottom-modal__footer">
+                <button type="submit" class="button-confirm">Xác nhận</button>
+              </div>
+            </form>
           </div>
-        </div>
-        <div class="bottom-modal__footer">
-          <button class="button-confirm">Xác nhận</button>
         </div>
       </div>
     </div>
     <!-- Hết Modal Giao tận nơi -->
 
+    <!-- Modal Promotion -->
+    <div class="bottom-modal modal-promotion">
+      <div class="bottom-modal__box">
+        <div class="bottom-modal__head promotion-close">
+          <button class="bottom-modal__close"><i class="las la-times"></i></button>
+          <div class="bottom-modal__title">
+            <h3>Mã khuyến mại</h3>
+          </div>
+        </div>
+        <div class="bottom-modal__content">
+          <div class="modal-promotion__form">
+            <form id="form-promotion">
+                <div class="modal-promotion__form-wrap">
+                  <input type="text" name="promotion" placeholder="Nhập mã tại đây" />
+                  <button type="submit" class="button-apply">Áp dụng</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal Promotion -->
+
   </div>
   <!-- End App -->
 
   <script src="assets/js/jquery-3.6.0.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.validate.min.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 </html>
