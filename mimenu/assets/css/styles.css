@@ -730,6 +730,7 @@ body {
   line-height: 15px;
   color: #9f9f9f;
   padding: 0 16px;
+  margin-bottom: 56px;
 }
 
 .footer__logo {
@@ -740,10 +741,10 @@ body {
 
 /* Bottom Bar */
 .bottom-bar {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
+  max-width: 480px;
   background-color: var(--background-lightest-color);
   padding: 16px 32px;
   height: 56px;
@@ -1020,6 +1021,10 @@ body {
 /* End Note Cart Modal */
 
 /* Page Product Detail */
+.product-detail {
+  margin-bottom: 80px;
+}
+
 .product-detail__button-head {
   position: relative;
   padding: 8px 16px;
@@ -1189,10 +1194,10 @@ body {
 }
 
 .product-detail__footer {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
+  max-width: 480px;
   background-color: var(--background-lightest-color);
   padding: 16px 32px;
   height: 80px;
@@ -1276,6 +1281,7 @@ body {
 
 .checkout-main {
   margin-top: 55px;
+  margin-bottom: 70px;
 }
 
 .checkout-products {
@@ -1640,10 +1646,10 @@ body {
 }
 
 .checkout-footer {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
+  max-width: 480px;
   background-color: var(--background-lightest-color);
   padding: 10px 16px;
   height: 70px;
@@ -1773,6 +1779,57 @@ body {
   outline: none;
   font-weight: 500;
   font-size: 15px;
+}
+
+.modal-promotion__list {
+  background: var(--primary-light-color);
+  border-radius: 8px;
+  padding: 10px;
+  max-height: 300px;
+}
+
+.modal-promotion__item {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 10px;
+}
+
+.modal-promotion__item-content {
+  flex: 1;
+  background: var(--background-lightest-color);
+  border-radius: 4px 12px 12px 4px;
+  padding: 10px;
+}
+
+.modal-promotion__item-code {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--text-light-color);
+  text-transform: uppercase;
+}
+
+.modal-promotion__item-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-color);
+  margin: 5px 0;
+}
+
+.modal-promotion__item-expiry {
+  font-size: 11px;
+  color: var(--text-light-color);
+}
+
+.modal-promotion__item-button {
+  font-size: 13px;
+  background: var(--background-lightest-color);
+  border: 0;
+  padding: 10px;
+  font-weight: bold;
+  color: var(--primary-color);
+  border-radius: 12px 4px 4px 12px;
+  border-left: 2px dotted var(--border-color);
+  min-width: 60px;
 }
 
 .button-apply {
@@ -1920,10 +1977,10 @@ body {
 }
 
 .order-footer {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
+  max-width: 480px;
   background-color: var(--background-lightest-color);
   padding: 10px 16px;
   height: 70px;
@@ -1993,6 +2050,14 @@ body {
 @media (max-width: 375px) {
   .info-shop {
     margin: -40px 16px 8px;
+  }
+
+  .bottom-modal__content {
+    padding: 0 10px;
+  }
+
+  .bottom-modal__close {
+    right: 10px;
   }
 }
 /* End Responsive */
