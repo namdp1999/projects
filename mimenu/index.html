@@ -17,13 +17,43 @@
   <div class="app">
     <!-- Header -->
     <header class="header fixed-top">
-      <div class="search">
-        <input type="text" placeholder="Tìm kiếm sản phẩm" readonly />
-        <i class="las la-search"></i>
+      <div class="header__top">
+        <div class="search">
+          <input type="text" placeholder="Tìm kiếm sản phẩm" readonly />
+          <i class="las la-search"></i>
+        </div>
+        <button class="share">
+          <i class="las la-share"></i>
+        </button>
       </div>
-      <button class="share">
-        <i class="las la-share"></i>
-      </button>
+      <div class="filter-category">
+        <div class="filter-category__list">
+          <a href="#" class="filter-category__item active">
+            Tất cả
+          </a>
+          <a href="#" class="filter-category__item">
+            Trà mạn
+          </a>
+          <a href="#" class="filter-category__item">
+            Cà phê
+          </a>
+          <a href="#" class="filter-category__item">
+            Nước trái cây
+          </a>
+          <a href="#" class="filter-category__item">
+            Bia
+          </a>
+          <a href="#" class="filter-category__item">
+            Rượu
+          </a>
+          <a href="#" class="filter-category__item">
+            Nước lọc
+          </a>
+        </div>
+        <div class="filter-category__more">
+          <i class="las la-ellipsis-v"></i>
+        </div>
+      </div>
     </header>
     <!-- End Header -->
 
@@ -488,6 +518,55 @@
       </div>
     </div>
     <!-- End Note Cart Modal -->
+
+    <!-- Modal Filter Category -->
+    <div class="bottom-modal filter-category-modal">
+      <div class="bottom-modal__box">
+        <div class="bottom-modal__head filter-category-close">
+          <button class="bottom-modal__close"><i class="las la-times"></i></button>
+          <div class="bottom-modal__title">
+            <h3>Xem theo</h3>
+          </div>
+        </div>
+        <div class="bottom-modal__content">
+          <ul class="filter-category-modal__list scrollbar">
+            <li class="filter-category-modal__item">
+              <label for="tat-ca">Tất cả</label>
+              <input type="radio" id="tat-ca" name="filter" value="tat-ca" checked>
+            </li>
+            <li class="filter-category-modal__item">
+              <label for="tra-man">Trà mạn</label>
+              <input type="radio" id="tra-man" name="filter" value="tra-man">
+            </li>
+            <li class="filter-category-modal__item">
+              <label for="ca-phe">Cà phê</label>
+              <input type="radio" id="ca-phe" name="filter" value="ca-phe">
+            </li>
+            <li class="filter-category-modal__item">
+              <label for="nuoc-trai-cay">Nước trái cây</label>
+              <input type="radio" id="nuoc-trai-cay" name="filter" value="nuoc-trai-cay">
+            </li>
+            <li class="filter-category-modal__item">
+              <label for="bia">Bia</label>
+              <input type="radio" id="bia" name="filter" value="bia">
+            </li>
+            <li class="filter-category-modal__item">
+              <label for="ruou">Rượu</label>
+              <input type="radio" id="ruou" name="filter" value="ruou">
+            </li>
+            <li class="filter-category-modal__item">
+              <label for="ruou">Rượu</label>
+              <input type="radio" id="ruou" name="filter" value="ruou">
+            </li>
+            <li class="filter-category-modal__item">
+              <label for="nuoc-loc">Nước lọc</label>
+              <input type="radio" id="nuoc-loc" name="filter" value="nuoc-loc">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal Filter Category -->
   </div>
   <!-- End App -->
 

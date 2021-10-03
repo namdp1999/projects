@@ -64,6 +64,18 @@ $(".filter-modal").click(function () {
 });
 // End Filter Modal
 
+// Filter Category Modal
+$(".filter-category__more").click(function () {
+    $(".filter-category-modal").addClass("open");
+    $(".bottom-modal__box").addClass("open");
+});
+
+$(".filter-category-modal").click(function () {
+    $(".bottom-modal").removeClass("open");
+    $(".bottom-modal__box").removeClass("open");
+});
+// End Filter Category Modal
+
 // Cart Modal
 $(".button-cart").click(function () {
     $(".cart-modal").addClass("open");
