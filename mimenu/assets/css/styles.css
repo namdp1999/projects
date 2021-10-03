@@ -719,6 +719,9 @@ body {
   background: var(--text-lighter-color);
   color: var(--background-lightest-color);
   font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .products__item-amount button.btn-add {
