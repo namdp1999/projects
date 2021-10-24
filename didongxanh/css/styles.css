@@ -1599,6 +1599,10 @@ b, strong {
   text-transform: uppercase;
 }
 
+.product-item-grid__button.btn-resell {
+  background: var(--orange);
+}
+
 .product-item-grid__button:hover {
   background: var(--color-highlight);
   color: var(--white);
