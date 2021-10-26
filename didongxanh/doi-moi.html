@@ -875,7 +875,7 @@
                 </div>
               </div>
               <div class="products-getnew__button">
-                <a href="#">Đổi ngay</a>
+                <a href="#" data-toggle="modal" data-target="#modalDoiNgay">Đổi ngay</a>
               </div>
             </div>
           </div>
@@ -905,7 +905,7 @@
                 </div>
               </div>
               <div class="products-getnew__button">
-                <a href="#">Đổi ngay</a>
+                <a href="#" data-toggle="modal" data-target="#modalDoiNgay">Đổi ngay</a>
               </div>
             </div>
           </div>
@@ -935,7 +935,7 @@
                 </div>
               </div>
               <div class="products-getnew__button">
-                <a href="#">Đổi ngay</a>
+                <a href="#" data-toggle="modal" data-target="#modalDoiNgay">Đổi ngay</a>
               </div>
             </div>
           </div>
@@ -965,7 +965,7 @@
                 </div>
               </div>
               <div class="products-getnew__button">
-                <a href="#">Đổi ngay</a>
+                <a href="#" data-toggle="modal" data-target="#modalDoiNgay">Đổi ngay</a>
               </div>
             </div>
           </div>
@@ -995,7 +995,7 @@
                 </div>
               </div>
               <div class="products-getnew__button">
-                <a href="#">Đổi ngay</a>
+                <a href="#" data-toggle="modal" data-target="#modalDoiNgay">Đổi ngay</a>
               </div>
             </div>
           </div>
@@ -1025,7 +1025,7 @@
                 </div>
               </div>
               <div class="products-getnew__button">
-                <a href="#">Đổi ngay</a>
+                <a href="#" data-toggle="modal" data-target="#modalDoiNgay">Đổi ngay</a>
               </div>
             </div>
           </div>
@@ -1042,6 +1042,159 @@
       <!-- End Load More -->
     </div>
     <!-- Hết Chọn sản phẩm bạn muốn lên đời -->
+
+    <!-- Modal Đổi ngay -->
+    <div class="modal fade modal-resell" id="modalDoiNgay" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Đăng ký thông tin</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="resell-main">
+              <div class="resell-main__product">
+                <div class="resell-main__product-image">
+                  <img src="images/products/pro-1.png" alt="Product Item">
+                </div>
+                <div class="resell-main__product-name">
+                  <span>Tên sản phẩm: </span>
+                  <strong>iPhone 11 64GB Quốc Tế (Likenew) 1</strong>
+                </div>
+                <div class="resell-main__product-price">
+                  <span>Số tiền bạn sẽ Bù chênh lệch trả thẳng:</span>
+                  <strong>25.990.000₫</strong>
+                  <span><del>25.990.000₫</del></span>
+                </div>
+                <p class="resell-main__note"><i>* Quý Khách vui lòng đem máy tới cửa hàng để được định giá và bán lại - lên đời với giá tốt nhất.</i></p>
+              </div>
+              <div class="resell-main__info">
+                <form action="">
+                  <div class="row">
+                    <div class="col-md-6 col-12">
+                      <div class="form-group">
+                        <label for="name">Họ và tên: *</label>
+                        <input type="text" class="form-control" id="name" placeholder="Nhập họ và tên">
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <div class="form-group">
+                        <label for="phone">Số điện thoại: *</label>
+                        <input type="text" class="form-control" id="phone" placeholder="Nhập số điện thoại!">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cart-detail-boxbank__form-address">
+                    <div class="row">
+                      <div class="col-md-6 col-sm-6 col-12">
+                        <div class="form-group">
+                          <select class="form-control cart-detail-boxbank__select">
+                            <option>Chọn thành phố</option>
+                            <option>Hồ Chí Minh</option>
+                            <option>Hà Nội</option>
+                            <option>Đà Nẵng</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-6 col-12">
+                        <div class="form-group">
+                          <select class="form-control cart-detail-boxbank__select">
+                            <option>Chọn quận / huyện</option>
+                            <option>Quận 1</option>
+                            <option>Quận 2</option>
+                            <option>Quận 3</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart-detail-boxbank__form-address-store">
+                      <ul class="scrollbar">
+                        <li>
+                          <label class="label-checkbox">
+                            <span class="label-checkbox__label">Kho giao hàng Online</span>
+                            <input type="radio" name="address-store" value="1" checked="">
+                            <span class="checkmark"></span>
+                          </label>
+                        </li>
+                        <li>
+                          <label class="label-checkbox">
+                            <span class="label-checkbox__label">55B Trần Quang Khải, P. Tân Định, Q. 1</span>
+                            <input type="radio" name="address-store" value="2">
+                            <span class="checkmark"></span>
+                          </label>
+                        </li>
+                        <li>
+                          <label class="label-checkbox">
+                            <span class="label-checkbox__label">134 Nguyễn Thái Học, P. Phạm Ngũ Lão, Q.1, TP HCM</span>
+                            <input type="radio" name="address-store" value="3">
+                            <span class="checkmark"></span>
+                          </label>
+                        </li>
+                        <li>
+                          <label class="label-checkbox">
+                            <span class="label-checkbox__label">139 Trần Não, Ấp Bình Khánh 3, Phường Bình An, Quận 2</span>
+                            <input type="radio" name="address-store" value="4">
+                            <span class="checkmark"></span>
+                          </label>
+                        </li>
+                        <li>
+                          <label class="label-checkbox">
+                            <span class="label-checkbox__label">139 Trần Não, Ấp Bình Khánh 3, Phường Bình An, Quận 2</span>
+                            <input type="radio" name="address-store" value="5">
+                            <span class="checkmark"></span>
+                          </label>
+                        </li>
+                        <li>
+                          <label class="label-checkbox">
+                            <span class="label-checkbox__label">139 Trần Não, Ấp Bình Khánh 3, Phường Bình An, Quận 2</span>
+                            <input type="radio" name="address-store" value="6">
+                            <span class="checkmark"></span>
+                          </label>
+                        </li>
+                        <li>
+                          <label class="label-checkbox">
+                            <span class="label-checkbox__label">139 Trần Não, Ấp Bình Khánh 3, Phường Bình An, Quận 2</span>
+                            <input type="radio" name="address-store" value="7">
+                            <span class="checkmark"></span>
+                          </label>
+                        </li>
+                        <li>
+                          <label class="label-checkbox">
+                            <span class="label-checkbox__label">139 Trần Não, Ấp Bình Khánh 3, Phường Bình An, Quận 2</span>
+                            <input type="radio" name="address-store" value="8">
+                            <span class="checkmark"></span>
+                          </label>
+                        </li>
+                        <li>
+                          <label class="label-checkbox">
+                            <span class="label-checkbox__label">139 Trần Não, Ấp Bình Khánh 3, Phường Bình An, Quận 2</span>
+                            <input type="radio" name="address-store" value="9">
+                            <span class="checkmark"></span>
+                          </label>
+                        </li>
+                        <li>
+                          <label class="label-checkbox">
+                            <span class="label-checkbox__label">139 Trần Não, Ấp Bình Khánh 3, Phường Bình An, Quận 2</span>
+                            <input type="radio" name="address-store" value="10">
+                            <span class="checkmark"></span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="text-center mt-10">
+                    <button type="button" class="btn btn-success btn-block">ĐẶT HÀNG</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hết Modal Đổi ngay -->
 
     <div class="container">
       <!-- Rating -->

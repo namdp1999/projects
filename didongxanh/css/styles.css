@@ -6636,6 +6636,12 @@ b, strong {
   font-weight: 600;
 }
 
+.resell-main__note {
+  font-size: 12px;
+  color: var(--red);
+  margin-top: 10px;
+}
+
 .box-comeback {
   padding: 30px 0 15px;
 }
