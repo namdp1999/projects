@@ -415,6 +415,7 @@ a:hover {
 
 .header__menu-mobile__expand {
   width: 288px;
+  height: 100vh;
   border-right: 1px solid #ddd;
   background: #fff;
   position: fixed;
