@@ -173,10 +173,10 @@ a:hover {
 
 .header__bottom--main {
   overflow: hidden;
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
-  display: -webkit-flex;
+  display: -webkit-flex; */
   display: flex;
   padding: 0 0 10px;
   align-items: flex-start;
