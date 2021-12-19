@@ -33,88 +33,10 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="header__top__account logged-account">
+            <div class="header__top__account">
               <ul>
-                <li class="account__noti">
-                  <a href="#" class="account__noti--link">
-                    <i class="fa fa-bell-o" aria-hidden="true"></i> Thông Báo
-                  </a>
-                  <!-- Box Notification -->
-                  <div class="popup-noti">
-                    <div class="popup-noti__arrow-up"></div>
-                    <h4 class="popup-noti__title">Thông Báo Mới Nhận</h4>
-                    <ul class="popup-noti__list">
-                      <li class="popup-noti__item">
-                        <a href="#">
-                          <div class="popup-noti__item__img">
-                            <img src="assets/images/products/2.jpg" alt="Image Notification">
-                          </div>
-                          <div class="popup-noti__item__content">
-                            <p class="popup-noti__item__title">Thanh toán đang chờ xử lý</p>
-                            <p class="popup-noti__item__desc">
-                              Bạn vui lòng thanh toán<b>150.000<sup>đ</sup></b> cho đơn hàng <b>#0123456789</b>
-                              trước <b>01/01/2021</b> để tránh đơn bị hủy.
-                            </p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="popup-noti__item">
-                        <a href="#">
-                          <div class="popup-noti__item__img">
-                            <img src="assets/images/products/3.jpg" alt="Image Notification">
-                          </div>
-                          <div class="popup-noti__item__content">
-                            <p class="popup-noti__item__title">Thanh toán đang chờ xử lý</p>
-                            <p class="popup-noti__item__desc">
-                              Bạn vui lòng thanh toán<b>150.000<sup>đ</sup></b> cho đơn hàng <b>#0123456789</b>
-                              trước <b>01/01/2021</b> để tránh đơn bị hủy.
-                            </p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="popup-noti__item">
-                        <a href="#">
-                          <div class="popup-noti__item__img">
-                            <img src="assets/images/products/4.jpg" alt="Image Notification">
-                          </div>
-                          <div class="popup-noti__item__content">
-                            <p class="popup-noti__item__title">Thanh toán đang chờ xử lý</p>
-                            <p class="popup-noti__item__desc">
-                              Bạn vui lòng thanh toán<b>150.000<sup>đ</sup></b> cho đơn hàng <b>#0123456789</b>
-                              trước <b>01/01/2021</b> để tránh đơn bị hủy.
-                            </p>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                    <div class="popup-noti__button">
-                      <a href="#">Xem tất cả</a>
-                    </div>
-                  </div>
-                  <!-- End Box Notification -->
-                </li>
-                <li class="account__user">
-                  <a href="#" class="account__user--link">
-                    <img src="assets/images/avatar_default.png" alt="Avatar">
-                    <span>namdang</span>
-                  </a>
-                  <!-- Box User -->
-                  <div class="popup-user">
-                    <div class="popup-user__arrow-up"></div>
-                    <ul class="popup-user__list">
-                      <li>
-                        <a href="#">Tài Khoản Của Tôi</a>
-                      </li>
-                      <li>
-                        <a href="#">Đơn Mua</a>
-                      </li>
-                      <li>
-                        <a href="#">Đăng Xuất</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- End Box User -->
-                </li>
+                <li><a href="#" data-toggle="modal" data-target="#modal-login">Đăng Nhập</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#modal-register">Đăng Ký</a></li>
               </ul>
             </div>
           </div>
@@ -122,6 +44,121 @@
       </div>
     </div>
     <!-- End header top -->
+
+    <!-- Modal login -->
+    <div class="modal fade modal-popup" id="modal-login" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">ĐĂNG NHẬP</h5>
+            <p class="modal-desc">Dễ dàng truy cập lịch sử đơn hàng, lưu sản phẩm yêu thích, xem giỏ hàng, nhận ưu đãi và nhiều hơn nữa.</p>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="fa fa-times-circle"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="username-label">Tên đăng nhập</label>
+                <input type="text" class="form-control" id="username-label" placeholder="Số điện thoại/Email">
+              </div>
+              <div class="form-group">
+                <label for="password-label">Mật khẩu</label>
+                <input type="password" class="form-control" id="password-label" placeholder="Nhập mật khẩu">
+              </div>
+              <div class="fogot">
+                <a href="#" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#modal-fogot">Quên mật khẩu?</a>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Đăng nhập</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p>Bạn chưa có tài khoản tại ktsp.vn?</p>
+            <button type="button" class="btn btn-outline-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#modal-register">Đăng ký</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal login -->
+
+    <!-- Modal Fogot Password -->
+    <div class="modal fade modal-popup" id="modal-fogot" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">QUÊN MẬT KHẨU</h5>
+            <p class="modal-desc">Vui lòng nhập số điện thoại bạn đã đăng ký trên ktsp.vn</p>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="fa fa-times-circle"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="phone-label">Số điện thoại</label>
+                <input type="text" class="form-control" id="phone-label" placeholder="Số điện thoại của bạn">
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">LẤY LẠI MẬT KHẨU</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal Fogot Password -->
+
+    <!-- Modal Register -->
+    <div class="modal fade modal-popup" id="modal-register" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">ĐĂNG KÝ</h5>
+            <p class="modal-desc">Dễ dàng truy cập lịch sử đơn hàng, lưu sản phẩm yêu thích, xem giỏ hàng, nhận ưu đãi và nhiều hơn nữa.</p>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="fa fa-times-circle"></i>
+            </button>
+          </div>
+          <div class="modal-body modal-popup__register">
+            <form>
+              <div class="form-group">
+                <label for="name-label">Họ tên <span class="text-red">(*)</span></label>
+                <input type="text" class="form-control" id="name-label" placeholder="Họ và tên">
+              </div>
+              <div class="form-group">
+                <label for="name-label">Email</label>
+                <input type="text" class="form-control" id="name-label" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label for="name-label">Số điện thoại <span class="text-red">(*)</span></label>
+                <input type="text" class="form-control" id="name-label" placeholder="Số điện thoại">
+              </div>
+              <div class="form-group">
+                <label for="password-label">Mật khẩu <span class="text-red">(*)</span></label>
+                <input type="password" class="form-control" id="password-label" placeholder="Nhập mật khẩu">
+              </div>
+              <div class="form-group">
+                <label for="password-label">Nhập lại mật khẩu <span class="text-red">(*)</span></label>
+                <input type="password" class="form-control" id="password-label" placeholder="Xác nhận mật khẩu">
+              </div>
+              <div class="rules">
+                Bằng việc đăng kí, bạn đã đồng ý với Ktsp.vn về <a href="#">Điều khoản dịch vụ</a> & <a href="#">chính sách bảo mật</a>.
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Đăng ký</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p>Bạn đã có tài khoản tại ktsp.vn?</p>
+            <button type="button" class="btn btn-outline-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#modal-login">Đăng nhập</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal Register -->
 
     <!-- Header bottom -->
     <div class="header__bottom">
@@ -145,35 +182,25 @@
                     </li>
                     <li class="header__menu-mobile__item--two">
                       <a href="#">
-                        <svg stroke="#757575" fill="#757575" stroke-width="0" viewBox="0 0 24 24" size="25" height="25" width="25" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
-                        </svg>
+                        <svg stroke="#757575" fill="#757575" stroke-width="0" viewBox="0 0 24 24" size="25" height="25" width="25" xmlns="http://www.w3.org/2000/svg"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
                         Trang chủ
                       </a>
                     </li>
                     <li class="header__menu-mobile__item--two">
                       <a href="#">
-                        <svg stroke="#757575" fill="#757575" stroke-width="0" viewBox="0 0 24 24" size="25" height="25" width="25" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"></path>
-                        </svg>
+                        <svg stroke="#757575" fill="#757575" stroke-width="0" viewBox="0 0 24 24" size="25" height="25" width="25" xmlns="http://www.w3.org/2000/svg"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"></path></svg>
                         Danh sách ngành hàng
                       </a>
                     </li>
                     <li class="header__menu-mobile__item--two">
                       <a href="#">
-                        <svg stroke="#757575" fill="#757575" stroke-width="0" viewBox="0 0 24 24" size="25" height="25" width="25" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z">
-                          </path>
-                        </svg>
+                        <svg stroke="#757575" fill="#757575" stroke-width="0" viewBox="0 0 24 24" size="25" height="25" width="25" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg>
                         Quản lý tài khoản
                       </a>
                     </li>
                     <li class="header__menu-mobile__item--two">
                       <a href="#">
-                        <svg stroke="#757575" fill="#757575" stroke-width="0" viewBox="0 0 24 24" size="25" height="25" width="25" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"></path>
-                        </svg>
+                        <svg stroke="#757575" fill="#757575" stroke-width="0" viewBox="0 0 24 24" size="25" height="25" width="25" xmlns="http://www.w3.org/2000/svg"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"></path></svg>
                         Thông báo
                       </a>
                     </li>
@@ -204,9 +231,7 @@
                     <li class="header__menu-mobile__item--two">
                       <a class="support" href="#">
                         Hỗ trợ khách hàng
-                        <svg stroke="#757575" fill="#757575" stroke-width="0" viewBox="0 0 24 24" size="20" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                        </svg>
+                        <svg stroke="#757575" fill="#757575" stroke-width="0" viewBox="0 0 24 24" size="20" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
                       </a>
                     </li>
                   </ul>
@@ -368,7 +393,7 @@
         <div class="col-md-12">
           <ol class="breadcrumb__list">
             <li><a href="/">Trang chủ</a></li>
-            <li class="active">Thông báo</li>
+            <li class="active">Đăng ký cửa hàng thành công</li>
           </ol>
         </div>
       </div>
@@ -376,225 +401,24 @@
   </div>
   <!-- end breadcrumb -->
 
-  <!-- page order detail -->
-  <div class="order-detail">
+  <!-- page notify -->
+  <div class="page-notify">
     <div class="container">
-      <div class="order-detail__box">
-
-        <div class="order-detail__head">
-          <a href="#"><i class="fa fa-angle-left"></i> Trở lại</a>
-          <span class="order-detail__id">ID ĐƠN HÀNG: TEST012345</span>
+      <div class="page-notify__wrap">
+        <div class="page-notify__image">
+          <img src="assets/images/store-online.jpg" alt="Store Online">
         </div>
-        <!-- Steps -->
-        <div class="stepper">
-          <div class="stepper__item">
-            <div class="stepper__icon stepper__icon--finish">
-              <div class="stepper__item-line"></div>
-              <i class="fas fa-receipt"></i>
-            </div>
-            <div class="stepper__step-text">Đơn hàng đã đặt</div>
-            <div class="stepper__step-date">21:08 15-08-2021</div>
-          </div>
-          <div class="stepper__item">
-            <div class="stepper__icon stepper__icon--finish">
-              <div class="stepper__item-line"></div>
-              <i class="fas fa-file-invoice-dollar"></i>
-            </div>
-            <div class="stepper__step-text">Đơn hàng đã thanh toán (600.000đ)</div>
-            <div class="stepper__step-date">21:08 15-08-2021</div>
-          </div>
-          <div class="stepper__item">
-            <div class="stepper__icon stepper__icon--pending">
-              <div class="stepper__item-line"></div>
-              <i class="fas fa-truck"></i>
-            </div>
-            <div class="stepper__step-text">Chờ lấy hàng</div>
-            <div class="stepper__step-date"></div>
-          </div>
-          <div class="stepper__item">
-            <div class="stepper__icon">
-              <div class="stepper__item-line"></div>
-              <i class="fas fa-people-carry"></i>
-            </div>
-            <div class="stepper__step-text">Đang giao</div>
-            <div class="stepper__step-date"></div>
-          </div>
-          <div class="stepper__item">
-            <div class="stepper__icon">
-              <div class="stepper__item-line"></div>
-              <i class="far fa-star"></i>
-            </div>
-            <div class="stepper__step-text">Đánh giá</div>
-            <div class="stepper__step-date"></div>
-          </div>
+        <div class="page-notify__title">
+          Đăng ký cửa hàng mới thành công
         </div>
-        <!-- End steps -->
-        <div class="order-detail__noti">
-          Người bán cần gửi hàng trước <span>18-08-2021</span>
+        <div class="page-notify__desc">
+          Chúc mừng bạn đã đăng ký cửa hàng trên hệ thống của chúng tôi. BQT sẽ tiến hành phê duyệt thông tin. Mời bạn chú ý điện thoại và email để giữ liên lạc.
         </div>
-
-        <div class="order-detail__button">
-          <a href="#">Liên hệ Người bán</a>
-        </div>
-
-        <div class="order-detail__button">
-          <a href="#">Hủy đơn hàng</a>
-        </div>
-
-        <div class="order-detail__line"></div>
-
-        <!-- Chi tiết trạng thái -->
-        <div class="order-detail__info">
-          <div class="order-detail__info-title">
-            Địa Chỉ Nhận Hàng
-          </div>
-          <div class="row">
-            <div class="col-md-3">
-              <div class="order-detail__user">
-                <div class="order-detail__user-name">
-                  Nguyễn Văn A
-                </div>
-                <div class="order-detail__user-phone">
-                  0123 456 789
-                </div>
-                <div class="order-detail__user-address">
-                  Số 123, đường ABC, Hà Đông, Hà Nội
-                </div>
-              </div>
-            </div>
-            <div class="col-md-9">
-              <div class="order-detail__list">
-                <div class="order-detail__item">
-                  <div class="order-detail__item-line"></div>
-                  <div class="order-detail__item-content">
-                    <div class="order-detail__item-circle"></div>
-                    <div class="order-detail__item-time">
-                      11:12 21-08-2021
-                    </div>
-                    <div class="order-detail__item-text">
-                      Đang lấy hàng
-                    </div>
-                  </div>
-                </div>
-                <div class="order-detail__item">
-                  <div class="order-detail__item-line"></div>
-                  <div class="order-detail__item-content">
-                    <div class="order-detail__item-circle"></div>
-                    <div class="order-detail__item-time">
-                      11:12 21-08-2021
-                    </div>
-                    <div class="order-detail__item-text">
-                      Lấy hàng không thành công vì :Hẹn lấy hàng sau do thiên tai (bão, virus, sạc lỡ,…) Lấy hàng không thành công vì Hẹn lấy hàng sau do thiên tai (bão, virus, sạc lỡ,…)
-                    </div>
-                  </div>
-                </div>
-                <div class="order-detail__item">
-                  <div class="order-detail__item-line"></div>
-                  <div class="order-detail__item-content">
-                    <div class="order-detail__item-circle"></div>
-                    <div class="order-detail__item-time">
-                      11:12 21-08-2021
-                    </div>
-                    <div class="order-detail__item-text">
-                      Đang lấy hàng
-                    </div>
-                  </div>
-                </div>
-                <div class="order-detail__item">
-                  <div class="order-detail__item-line"></div>
-                  <div class="order-detail__item-content">
-                    <div class="order-detail__item-circle"></div>
-                    <div class="order-detail__item-time">
-                      11:12 21-08-2021
-                    </div>
-                    <div class="order-detail__item-text">
-                      Người gửi đang chuẩn bị hàng
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Hết chi tiết trạng thái -->
-
-        <!-- Chi tiết đơn hàng -->
-        <div class="order-detail__products">
-          <div class="order-item">
-            <div class="order-item__head">
-                <div class="order-item__info-shop">
-                    <a href="#" class="order-item__link-shop">
-                        <img src="assets/images/avatar_shop.jpg" alt="">
-                        <span>Thủy Dược liệu Tây bắc</span>
-                    </a>
-                    <a href="#" class="order-item__chat-shop">
-                        <i class="fa fa-comments" aria-hidden="true"></i> Chat
-                    </a>
-                    <a href="#" class="order-item__view-shop">
-                        <i class="fas fa-store-alt"></i> Xem Shop
-                    </a>
-                    <div>
-                        <span class="badge badge-secondary">Chưa xác thực</span>
-                        <span class="badge badge-primary">Đã xác thực</span>
-                        <span class="badge badge-info">Hạng đồng</span>
-                        <span class="badge badge-light">Hạng bạc</span>
-                        <span class="badge badge-warning">Hạng vàng</span>
-                    </div>
-                </div>
-            </div>
-            <div class="order-item__list">
-              <a href="#">
-                <!-- Item -->
-                <div class="order-item__box">
-                  <img src="assets/images/product-detail/1.jpg" alt="Item Product">
-                  <div class="order-item__content">
-                    <p class="order-item__title">500gr bột cacao nguyên chất</p>
-                    <span class="order-item__quantity">x1</span>
-                  </div>
-                  <div class="order-item__price">
-                    <span class="order-item__price-old">
-                      <del>200,000<sup>đ</sup></del>
-                    </span>
-                    <span class="order-item__price-new">
-                      160,000<sup>đ</sup>
-                    </span>
-                  </div>
-                </div>
-                <!-- Item -->
-                <div class="order-item__box">
-                  <img src="assets/images/product-detail/2.jpg" alt="Item Product">
-                  <div class="order-item__content">
-                    <p class="order-item__title">500gr bột cacao nguyên chất</p>
-                    <span class="order-item__quantity">x1</span>
-                  </div>
-                  <div class="order-item__price">
-                    <span class="order-item__price-old">
-                      <del>200,000<sup>đ</sup></del>
-                    </span>
-                    <span class="order-item__price-new">
-                      160,000<sup>đ</sup>
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="order-item__footer">
-              <div class="order-item__ship">
-                <span>Phí vận chuyển:</span>
-                <span class="order-item__ship-number">10,000<sup>đ</sup></span>
-              </div>
-              <div class="order-item__price-total">
-                <span>Tổng số tiền:</span>
-                <span class="order-item__price-number">600,000<sup>đ</sup></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Hết Chi tiết đơn hàng -->
+        <a href="index.html" class="page-notify__btn">Quay về trang chủ</a>
       </div>
     </div>
   </div>
-  <!-- end page order detail -->
+  <!-- end page notify -->
 
   <!-- new-letter -->
   <div class="new-letter">

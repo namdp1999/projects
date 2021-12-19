@@ -93,11 +93,15 @@ $('.eight-column').slick({
 
 // Menu mobile
 $(document).ready(function() {
-  $('#header__menu').on('click', function() {
+  $('#header__menu .fa-bars').on('click', function() {
     $('#header__menu').addClass('open');
     $('.header__bottom__ovelay').addClass('active');
   });
   $('.header__bottom__ovelay').on('click', function() {
+    $('#header__menu').removeClass('open');
+    $('.header__bottom__ovelay').removeClass('active');
+  });
+  $('.header__menu-mobile-close').on('click', function() {
     $('#header__menu').removeClass('open');
     $('.header__bottom__ovelay').removeClass('active');
   });
@@ -152,3 +156,14 @@ $(".account__noti").hover(function() {
 $(".account__user").hover(function() {
   $(".popup-user").toggleClass("active");
 });
+
+// Preview Image Upload
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#register-store-logo').attr('src', e.target.result);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}

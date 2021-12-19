@@ -386,129 +386,464 @@
   </div>
   <!-- End Header -->
 
-  <!-- page cart -->
-  <div class="page-cart">
+  <!-- breadcrumb -->
+  <div class="breadcrumb">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="page-cart--main">
-            <div class="page-cart__product-buy">
-              <label class="page-cart__product-buy__title">GIỎ HÀNG</label>
-              <span class="page-cart__product-buy__count">(2)</span>
-            </div>
-            <div class="page-cart__main">
-              <!-- Danh sách các sản phẩm trong giỏ hàng -->
-              <div class="page-cart__inner">
-                <ul class="page-cart__inner__products">
-                  <!-- Item -->
-                    <li class="page-cart__inner__product">
-                        <div class="page-cart__inner__product__shop">
-                            <a href="#">
-                                <img src="assets/images/avatar_shop.jpg" alt="">
-                                <span>Thủy Dược liệu Tây bắc</span>
-                            </a>
-                        </div>
-                        <div>
-                            <span class="badge badge-secondary">Chưa xác thực</span>
-                            <span class="badge badge-primary">Đã xác thực</span>
-                            <span class="badge badge-info">Hạng đồng</span>
-                            <span class="badge badge-light">Hạng bạc</span>
-                            <span class="badge badge-warning">Hạng vàng</span>
-                        </div>
-                        <div class="page-cart__inner__product__item">
-                            <div class="page-cart__inner__product__item__img">
-                                <img src="assets/images/product-detail/1.jpg" alt="">
-                            </div>
-                            <div class="page-cart__inner__product__item__content">
-                                <div class="page-cart__inner__product__item__name">
-                                    <p>500gr bột cacao nguyên chất</p>
-                                    <span class="product__delete">Xóa</span>
-                                </div>
-                                <div class="page-cart__inner__product__item__price">
-                                    <div class="page-cart__inner__product__item__price-new">
-                                        160,000<sup>đ</sup>
-                                    </div>
-                                    <div class="page-cart__inner__product__item__price-old">
-                                        <span class="discount-price">200,000<sup>đ</sup></span>
-                                        <span class="seperate">|</span>
-                                        <span class="discount-percent">20%</span>
-                                    </div>
-                                </div>
-                                <div class="page-cart__inner__product__item__quantity">
-                                    <div class="number-input">
-                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"><img src="assets/images/minus.png" alt="" /></button>
-                                        <input class="quantity" min="1" name="quantity" value="1" type="number">
-                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"><img src="assets/images/plus.png" alt="" /></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                  <!-- Item -->
-                  <li class="page-cart__inner__product">
-                    <div class="page-cart__inner__product__shop">
-                      <a href="#">
-                        <img src="assets/images/avatar_shop.jpg" alt="">
-                        <span>Thủy Dược liệu Tây bắc</span>
-                      </a>
-                    </div>
-                    <div class="page-cart__inner__product__item">
-                      <div class="page-cart__inner__product__item__img">
-                        <img src="assets/images/product-detail/2.jpg" alt="">
-                      </div>
-                      <div class="page-cart__inner__product__item__content">
-                        <div class="page-cart__inner__product__item__name">
-                          <p>500gr bột cacao nguyên chất</p>
-                          <span class="product__delete">Xóa</span>
-                        </div>
-                        <div class="page-cart__inner__product__item__price">
-                          <div class="page-cart__inner__product__item__price-new">
-                            160,000<sup>đ</sup>
-                          </div>
-                          <div class="page-cart__inner__product__item__price-old">
-                            <span class="discount-price">200,000<sup>đ</sup></span>
-                            <span class="seperate">|</span>
-                            <span class="discount-percent">20%</span>
-                          </div>
-                        </div>
-                        <div class="page-cart__inner__product__item__quantity">
-                          <div class="number-input">
-                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"><img src="assets/images/minus.png" alt="" /></button>
-                            <input class="quantity" min="1" name="quantity" value="1" type="number">
-                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"><img src="assets/images/plus.png" alt="" /></button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
+          <ol class="breadcrumb__list">
+            <li><a href="/">Trang chủ</a></li>
+            <li class="active">Sàn đặc sản</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end breadcrumb -->
 
-                </ul>
+  <!-- Slide -->
+  <div class="slider-category">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="banner-slide" class="carousel slide" data-ride="carousel">
+            <!-- Dotted -->
+            <ol class="carousel-indicators">
+              <li data-target="#banner-slide" data-slide-to="0" class="active"></li>
+              <li data-target="#banner-slide" data-slide-to="1"></li>
+              <li data-target="#banner-slide" data-slide-to="2"></li>
+            </ol>
+
+
+            <!-- Slide items -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a href="#">
+                  <img src="assets/images/banner/slide-4.jpg" alt="Slide 1">
+                </a>
               </div>
-              <!-- Hết Danh sách các sản phẩm trong giỏ hàng -->
 
-              <!-- Tổng chi phí -->
-              <div class="page-cart__total-prices">
-                <div class="cart-prices">
-                  <div class="prices">
-                    <div class="prices__items">
-                      <span class="prices__text">Tổng (2 sản phẩm)</span>
-                    </div>
-                    <div class="prices__total">
-                      <span>Tổng tiền hàng</span>
-                      <div class="prices__value--final">đ480,000</div>
-                    </div>
+              <div class="carousel-item">
+                <a href="#">
+                  <img src="assets/images/banner/slide-5.jpg" alt="Slide 2">
+                </a>
+              </div>
+
+              <div class="carousel-item">
+                <a href="#">
+                  <img src="assets/images/banner/slide-6.jpg" alt="Slide 3">
+                </a>
+              </div>
+            </div>
+
+            <!-- Button next -->
+            <a class="carousel-control-prev" href="#banner-slide" role="button" data-slide="prev">
+              <i class="fa fa-chevron-left"></i>
+            </a>
+            <!-- Button prev -->
+            <a class="carousel-control-next" href="#banner-slide" role="button" data-slide="next">
+              <i class="fa fa-chevron-right"></i>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Slide -->
+
+  <div class="products-category page-list-store">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="products-category--main">
+            <div class="products-category__right">
+              <!-- Sắp xếp theo -->
+              <div class="products-category__right__filter">
+                <div class="products-category__right__filter__label">
+                  Sắp xếp theo
+                </div>
+                <div class="products-category__right__filter__form">
+                  <form>
+                    <select>
+                      <option value="mac-dinh" selected>Mặc định</option>
+                      <option value="moi-nhat">Mới nhất</option>
+                      <option value="uy-tin-nhat">Uy tín nhất</option>
+                      <option value="theo-ten">Theo tên</option>
+                    </select>
+                  </form>
+                </div>
+              </div>
+              <!-- Hết phần Sắp xếp theo -->
+
+              <!-- Danh sách sản phẩm -->
+              <div class="products-category__list">
+                <div class="products-category__box">
+                  <div class="products__item">
+                    <a href="#">
+                      <div class="products__item__img">
+                        <img src="assets/images/products/9.jpg" alt="">
+                      </div>
+                      <div class="products__item__info">
+                          <div class="products__item__name">Cửa hàng ABC</div>
+                          <div>
+                              <span class="badge badge-secondary">Chưa xác thực</span>
+                              <span class="badge badge-primary">Đã xác thực</span>
+                              <span class="badge badge-info">Hạng đồng</span>
+                              <span class="badge badge-light">Hạng bạc</span>
+                              <span class="badge badge-warning">Hạng vàng</span>
+                          </div>
+                          <div class="products__item__sold">
+                              <div class="products__item__sold__rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                              </div>
+                              <div class="products__item__sold__count">
+                                  <span>66 sản phẩm</span>
+                              </div>
+                          </div>
+                          <div class="products__item__address">
+                              <i class="fa fa-map-marker"></i> Hà Nội
+                          </div>
+                      </div>
+                    </a>
                   </div>
                 </div>
-                <a href="#" class="cart__submit">Tiến hành đặt hàng</a>
+                <div class="products-category__box">
+                  <div class="products__item">
+                    <a href="#">
+                      <div class="products__item__img">
+                        <img src="assets/images/products/9.jpg" alt="">
+                      </div>
+                      <div class="products__item__info">
+                          <div class="products__item__name">Cửa hàng ABC</div>
+                          <div>
+                              <span class="badge badge-secondary">Chưa xác thực</span>
+                              <span class="badge badge-primary">Đã xác thực</span>
+                              <span class="badge badge-info">Hạng đồng</span>
+                              <span class="badge badge-light">Hạng bạc</span>
+                              <span class="badge badge-warning">Hạng vàng</span>
+                          </div>
+                          <div class="products__item__sold">
+                              <div class="products__item__sold__rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                              </div>
+                              <div class="products__item__sold__count">
+                                  <span>66 sản phẩm</span>
+                              </div>
+                          </div>
+                          <div class="products__item__address">
+                              <i class="fa fa-map-marker"></i> Hà Nội
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="products-category__box">
+                  <div class="products__item">
+                    <a href="#">
+                      <div class="products__item__img">
+                        <img src="assets/images/products/9.jpg" alt="">
+                      </div>
+                      <div class="products__item__info">
+                        <div class="products__item__name">Cửa hàng ABC</div>
+                        <div class="products__item__sold">
+                          <div class="products__item__sold__rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                          </div>
+                          <div class="products__item__sold__count">
+                            <span>66 sản phẩm</span>
+                          </div>
+                        </div>
+                        <div class="products__item__address">
+                          <i class="fa fa-map-marker"></i> Hà Nội
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="products-category__box">
+                  <div class="products__item">
+                    <a href="#">
+                      <div class="products__item__img">
+                        <img src="assets/images/products/9.jpg" alt="">
+                      </div>
+                      <div class="products__item__info">
+                        <div class="products__item__name">Cửa hàng ABC</div>
+                        <div class="products__item__sold">
+                          <div class="products__item__sold__rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                          </div>
+                          <div class="products__item__sold__count">
+                            <span>66 sản phẩm</span>
+                          </div>
+                        </div>
+                        <div class="products__item__address">
+                          <i class="fa fa-map-marker"></i> Hà Nội
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="products-category__box">
+                  <div class="products__item">
+                    <a href="#">
+                      <div class="products__item__img">
+                        <img src="assets/images/products/9.jpg" alt="">
+                      </div>
+                      <div class="products__item__info">
+                        <div class="products__item__name">Cửa hàng ABC</div>
+                        <div class="products__item__sold">
+                          <div class="products__item__sold__rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                          </div>
+                          <div class="products__item__sold__count">
+                            <span>66 sản phẩm</span>
+                          </div>
+                        </div>
+                        <div class="products__item__address">
+                          <i class="fa fa-map-marker"></i> Hà Nội
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="products-category__box">
+                  <div class="products__item">
+                    <a href="#">
+                      <div class="products__item__img">
+                        <img src="assets/images/products/9.jpg" alt="">
+                      </div>
+                      <div class="products__item__info">
+                        <div class="products__item__name">Cửa hàng ABC</div>
+                        <div class="products__item__sold">
+                          <div class="products__item__sold__rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                          </div>
+                          <div class="products__item__sold__count">
+                            <span>66 sản phẩm</span>
+                          </div>
+                        </div>
+                        <div class="products__item__address">
+                          <i class="fa fa-map-marker"></i> Hà Nội
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="products-category__box">
+                  <div class="products__item">
+                    <a href="#">
+                      <div class="products__item__img">
+                        <img src="assets/images/products/9.jpg" alt="">
+                      </div>
+                      <div class="products__item__info">
+                        <div class="products__item__name">Cửa hàng ABC</div>
+                        <div class="products__item__sold">
+                          <div class="products__item__sold__rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                          </div>
+                          <div class="products__item__sold__count">
+                            <span>66 sản phẩm</span>
+                          </div>
+                        </div>
+                        <div class="products__item__address">
+                          <i class="fa fa-map-marker"></i> Hà Nội
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="products-category__box">
+                  <div class="products__item">
+                    <a href="#">
+                      <div class="products__item__img">
+                        <img src="assets/images/products/9.jpg" alt="">
+                      </div>
+                      <div class="products__item__info">
+                        <div class="products__item__name">Cửa hàng ABC</div>
+                        <div class="products__item__sold">
+                          <div class="products__item__sold__rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                          </div>
+                          <div class="products__item__sold__count">
+                            <span>66 sản phẩm</span>
+                          </div>
+                        </div>
+                        <div class="products__item__address">
+                          <i class="fa fa-map-marker"></i> Hà Nội
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="products-category__box">
+                  <div class="products__item">
+                    <a href="#">
+                      <div class="products__item__img">
+                        <img src="assets/images/products/9.jpg" alt="">
+                      </div>
+                      <div class="products__item__info">
+                        <div class="products__item__name">Cửa hàng ABC</div>
+                        <div class="products__item__sold">
+                          <div class="products__item__sold__rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                          </div>
+                          <div class="products__item__sold__count">
+                            <span>66 sản phẩm</span>
+                          </div>
+                        </div>
+                        <div class="products__item__address">
+                          <i class="fa fa-map-marker"></i> Hà Nội
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="products-category__box">
+                  <div class="products__item">
+                    <a href="#">
+                      <div class="products__item__img">
+                        <img src="assets/images/products/9.jpg" alt="">
+                      </div>
+                      <div class="products__item__info">
+                        <div class="products__item__name">Cửa hàng ABC</div>
+                        <div class="products__item__sold">
+                          <div class="products__item__sold__rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                          </div>
+                          <div class="products__item__sold__count">
+                            <span>66 sản phẩm</span>
+                          </div>
+                        </div>
+                        <div class="products__item__address">
+                          <i class="fa fa-map-marker"></i> Hà Nội
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <!-- Hết Tổng chi phí -->
+              <!-- Hết phần Danh sách sản phẩm -->
+
+              <!-- pagination -->
+              <div class="pagination-box">
+                <ul class="pagination justify-content-center" style="margin:20px 0">
+                  <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+              <!-- end pagination -->
+            </div>
+            <div class="products-category__left">
+              <!-- End all-categories -->
+              <div class="search-advanced">
+                <h3 class="search-advanced__title">Bộ Lọc Tìm Kiếm</h3>
+                <!-- Tỉnh thành -->
+                <div class="search-advanced__box">
+                  <h4 class="search-advanced__small-title">Tỉnh Thành</h4>
+                  <div class="search-advanced__type-radio">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="city" checked>Tất Cả
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="city">Tỉnh Thái Nguyên
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="city">Tỉnh Bắc Giang
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="city">Tỉnh Quảng Ninh
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="city">Tỉnh Hải Dương
+                      </label>
+                    </div>
+                    <span id="dots"></span>
+                    <!-- Xem thêm -->
+                    <span id="more">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="city">Tỉnh Bạc Liêu
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="city">Thành Phố Cần Thơ
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="city">Tỉnh Đồng Tháp
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="city">Tỉnh Tiền Giang
+                        </label>
+                      </div>
+                    </span>
+                    <span onclick="viewMore()" id="viewMore" class="search-advanced__box__view-more">Xem thêm</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- end page cart -->
 
   <!-- new-letter -->
   <div class="new-letter">
