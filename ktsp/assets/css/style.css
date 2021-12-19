@@ -544,7 +544,7 @@ a:hover {
 @media (max-width: 768px) {
   .header__bottom--main {
     display: block;
-    overflow: auto;
+    overflow: visible;
   }
 
   .header__menu {
