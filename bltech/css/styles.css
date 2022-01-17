@@ -1,0 +1,241 @@
+:root {
+  --color-main: #AF8240;
+  --color-highlight: #092169;
+  --color-text: #484848;
+
+  --white: #fff;
+  --black: #000;
+  --red: #da0808;
+  --green: #009a45;
+  --yellow: #f2c94c;
+  --light: #e5e5e5;
+  --blue: #007bff;
+  --purple: #6f42c1;
+  --pink: #fb4e4e;
+  --teal: #20c997;
+  --orange: #f39406;
+  --cyan: #00c2ff;
+  --gray: #898989;
+}
+
+/* Background */
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
+.bg-gray {
+  background-color: var(--gray);
+}
+/* End Background */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  overflow-y: scroll;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.swiper-container {
+  overflow: hidden;
+}
+
+.text-red {
+  color: var(--red);
+}
+
+/* Margin */
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.mt-5 {
+  margin-top: 5px;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-25 {
+  margin-top: 25px;
+}
+
+.mb-25 {
+  margin-bottom: 25px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+/* End Margin */
+
+/* Padding */
+.pt-0 {
+  padding-top: 0px;
+}
+
+.pb-0 {
+  padding-bottom: 0px;
+}
+
+.pt-5 {
+  padding-top: 5px;
+}
+
+.pb-5 {
+  padding-bottom: 5px;
+}
+
+.pt-10 {
+  padding-top: 10px;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+.pt-15 {
+  padding-top: 15px;
+}
+
+.pb-15 {
+  padding-bottom: 15px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.pt-25 {
+  padding-top: 25px;
+}
+
+.pb-25 {
+  padding-bottom: 25px;
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+/* End Padding */
+
+/* Scrollbar */
+.scrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+  background-color: var(--light);
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 4px;
+  background-color: var(--light);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--color-main);
+}
+/* End Scrollbar */
+
+/* Custom Bootstrap */
+@media (max-width: 767px) {
+  .container {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .row {
+    margin-right: -5px;
+    margin-left: -5px;
+  }
+
+  .col-12 {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+
+b, strong {
+  font-weight: 600;
+}
+/* End Custom Bootstrap */
+
+/* Header */
+.header-top__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+}
+/* End Header */
+
+/* Responsive Hidden */
+.desktop-hidden {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .mobi-hidden {
+    display: none;
+  }
+  
+  .desktop-hidden {
+    display: block;
+  }
+}
+/* End Responsive Hidden */
