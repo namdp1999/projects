@@ -31,3 +31,7 @@ $(".header-menu__btn-close").click(function () {
 $(".header-menu__overlay").click(function () {
   $(".header-menu").removeClass("show");
 });
+
+$(".header-menu__item").click(function () {
+  $(this).toggleClass("show");
+});
