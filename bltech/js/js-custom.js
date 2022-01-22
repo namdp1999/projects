@@ -18,6 +18,7 @@ var js_banner_slide = new Swiper(".js-partners-slide", {
     },
   },
 });
+// End Partners Slide
 
 // Menu Mobile
 $(".header-menu__btn-open").click(function () {
@@ -35,3 +36,8 @@ $(".header-menu__overlay").click(function () {
 $(".header-menu__item").click(function () {
   $(this).toggleClass("show");
 });
+// End Menu Mobile
+
+// Service Video
+lightGallery(document.getElementById('js-service-video'));
+// End Service Video
