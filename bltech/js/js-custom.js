@@ -41,3 +41,9 @@ $(".header-menu__item").click(function () {
 // Service Video
 lightGallery(document.getElementById('js-service-video'));
 // End Service Video
+
+// Scroll To Top
+$("#return-to-top").click(function() {
+  $(window).scrollTop(0);
+});
+// End Scroll To Top
