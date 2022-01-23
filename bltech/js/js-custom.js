@@ -47,3 +47,34 @@ $("#return-to-top").click(function() {
   $(window).scrollTop(0);
 });
 // End Scroll To Top
+
+// Product Amount
+$('.btn-add').click(function () {
+  $(this).prev().val(+$(this).prev().val() + 1);
+});
+$('.btn-sub').click(function () {
+  if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
+});
+// End Product Amount
+
+// Product Detail Images
+var productDetailTop = new Swiper('.product-detail-main__images-top', {
+  slidesPerView: 1,  
+  loop: true,
+  loopedSlides: 50,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+var productDetailThumbs = new Swiper('.product-detail-main__images-thumbs', {
+  direction: 'vertical',
+  slidesPerView: 4,
+  slideToClickedSlide: true,
+  spaceBetween: 10,
+  loopedSlides: 50,
+  loop: true,
+});
+productDetailTop.controller.control = productDetailThumbs;
+productDetailThumbs.controller.control = productDetailTop;
+// End Product Detail Images
