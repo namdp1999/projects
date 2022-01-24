@@ -1348,8 +1348,12 @@ input:focus {
 /* Breadcrumb */
 .breadcrumb {
   background: #F2F2F2;
-  padding: 10px 0;
   margin-bottom: 30px;
+  padding: 0;
+}
+
+.breadcrumb__wrap {
+  padding: 10px 0;
 }
 
 .breadcrumb__wrap a {
@@ -1682,6 +1686,21 @@ input:focus {
 /* End Box Service Video */
 
 /* Service Detail */
+.service-detail-tabs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service-detail-tabs a {
+  display: inline-block;
+  padding: 10px;
+}
+
+.service-detail-tabs a.active, .service-detail-tabs a:hover {
+  background: var(--color-main);
+  color: var(--white);
+}
+
 .service-detail-header {
   padding-bottom: 30px;
   margin-bottom: 30px;
