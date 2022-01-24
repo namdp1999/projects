@@ -1874,6 +1874,10 @@ input:focus {
   font-weight: bold;
   text-transform: uppercase;
 }
+
+.box-banner-text__desc {
+  margin-top: 16px;
+}
 /* End Box Banner Text */
 
 /* Category Product */
@@ -2325,3 +2329,143 @@ input:focus {
   height: auto;
 }
 /* End Banner Full */
+
+/* Box Maps */
+.box-maps {
+  position: relative;
+  padding-top: 500px;
+  margin-bottom: -36px;
+}
+
+.box-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* End Box Maps */
+
+/* Box Contact */
+.box-contact {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.box-contact__wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.box-contact__info {
+  width: 30%;
+  background-image: url(../images/background/bg-contact.jpg);
+  background-size: cover;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  min-height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 20px;
+  color: var(--white);
+}
+
+.box-contact__info-title {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.box-contact__info-address {
+  margin-bottom: 48px;
+}
+
+.box-contact__info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.box-contact__info-item i {
+  font-size: 20px;
+  margin-right: 12px;
+  color: #FFBD5D;
+}
+
+.box-contact__info-social a {
+  color: var(--white);
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.box-contact__info-social {
+  margin-top: 90px;
+}
+
+.box-contact__info-social a:hover {
+  color: #FFBD5D;
+}
+
+.box-contact__form {
+  width: 70%;
+  padding-left: 16px;
+}
+
+.box-contact__form .form-group {
+  margin-bottom: 30px;
+}
+
+.box-contact__form .form-group > label {
+  font-weight: 600;
+  color: var(--color-main);
+  margin-bottom: 0;
+}
+
+.box-contact__form .form-control {
+  border: 0;
+  border-bottom: 1px solid #CBCACA;
+  border-radius: 0;
+}
+
+.box-contact__form input {
+  height: 30px;
+}
+
+.box-contact__form-check {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box-contact__form-check .form-check {
+  margin-right: 20px;
+  margin-bottom: 8px;
+}
+
+.box-contact__form-check input {
+  height: auto;
+}
+
+.box-contact__form-btn {
+  background: var(--color-main);
+  color: var(--white);
+  padding: 12px 30px;
+  border: 0;
+  border-radius: 5px;
+}
+
+@media (max-width: 991px) {
+  .box-contact__info {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .box-contact__form {
+    width: 100%;
+  }
+}
+/* End Box Contact */
