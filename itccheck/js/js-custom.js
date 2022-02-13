@@ -24,13 +24,16 @@ $("#return-to-top").click(function() {
 
 // Intro Help Slide
 var js_banner_slide = new Swiper(".js-intro-help-slide", {
-  slidesPerView: 2,
+  slidesPerView: 1,
   spaceBetween: 8,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
+    481: {
+      slidesPerView: 2,
+    },
     640: {
       slidesPerView: 2,
     },
@@ -46,7 +49,7 @@ var js_banner_slide = new Swiper(".js-intro-help-slide", {
 
 // News Slide
 var js_banner_slide = new Swiper(".js-news-slide", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 8,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -57,11 +60,11 @@ var js_banner_slide = new Swiper(".js-news-slide", {
     dynamicBullets: true,
   },
   breakpoints: {
-    640: {
+    481: {
       slidesPerView: 2,
     },
     768: {
-      slidesPerView: 2,
+      slidesPerView: 3,
     },
     1024: {
       slidesPerView: 3,
