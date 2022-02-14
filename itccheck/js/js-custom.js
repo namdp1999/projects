@@ -76,3 +76,15 @@ var js_banner_slide = new Swiper(".js-news-slide", {
 // Why Choose Video
 lightGallery(document.getElementById('js-why-choose-video'));
 // End Why Choose Video
+
+// Testimonial Slide
+var js_banner_slide = new Swiper(".js-testimonial-slide", {
+  slidesPerView: 1,
+  spaceBetween: 8,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  }
+});
+// End Testimonial Slide
