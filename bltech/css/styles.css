@@ -225,6 +225,7 @@ input:focus {
 .header-topbar {
   background: var(--color-main);
   padding: 10px 0;
+  display: none;
 }
 
 .header-topbar__wrap {
@@ -349,6 +350,58 @@ input:focus {
 /* Header Main */
 .header-main {
   padding: 10px 0;
+  background: var(--white);
+}
+
+.header-main.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  -moz-box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
+  -webkit-box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
+  box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
+}
+
+.fixed {
+  -webkit-animation-name: fadeInDown;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  -webkit-animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-name: anim_titles;
+  -moz-animation-duration: 5s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: normal;
+  -moz-animation-play-state: running;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation-duration: .7s;
+  -moz-animation-duration: .7s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
 }
 
 .header-main__wrap {
@@ -387,12 +440,12 @@ input:focus {
 }
 
 .header-menu__item {
-  margin-left: 20px;
+  margin-left: 25px;
   position: relative;
 }
 
 .header-menu__link {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--color-text);
   display: inline-block;
   position: relative;
@@ -510,7 +563,7 @@ input:focus {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: #000000b8;
     z-index: 99;
   }
@@ -676,7 +729,7 @@ input:focus {
 
 /* Box Highlight */
 .box-highlight {
-  padding: 80px 0;
+  padding: 80px 0 30px;
 }
 
 .box-highlight .col-md-2 {
@@ -689,6 +742,7 @@ input:focus {
   padding: 20px 10px;
   text-align: center;
   height: 100%;
+  cursor: pointer;
 }
 
 .box-highlight__item img {
@@ -704,20 +758,28 @@ input:focus {
   color: var(--color-main);
 }
 
-.box-highlight__item:hover {
+.box-highlight__item:hover, .swiper-slide-thumb-active .box-highlight__item {
   background: var(--color-main);
 }
 
-.box-highlight__item:hover .box-highlight__item-title {
+.box-highlight__item:hover .box-highlight__item-title, .swiper-slide-thumb-active .box-highlight__item-title {
   color: var(--white);
 }
 
-.box-highlight__item:hover img {
+.box-highlight__item:hover img, .swiper-slide-thumb-active .box-highlight__item img {
   filter: brightness(0) invert(1);
+}
+
+.box-highlight .swiper-button-next:after, .box-highlight .swiper-button-prev:after {
+  font-size: 20px;
 }
 /* End Box Highlight */
 
 /* Box Blog */
+.box-blog .swiper-slide {
+  background: var(--white);
+}
+
 .blog-item {
   margin-bottom: 30px;
   border-radius: 10px;
@@ -1272,8 +1334,8 @@ input:focus {
 /* Button Fixed */
 .button-fixed {
   position: fixed;
-  bottom: 30%;
-  right: 40px;
+  bottom: 20px;
+  right: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1284,6 +1346,10 @@ input:focus {
   display: inline-block;
   margin-bottom: 20px;
   cursor: pointer;
+}
+
+.button-fixed img {
+  width: 36px;
 }
 
 @media (max-width: 991px) {

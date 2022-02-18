@@ -78,3 +78,56 @@ var productDetailThumbs = new Swiper('.product-detail-main__images-thumbs', {
 productDetailTop.controller.control = productDetailThumbs;
 productDetailThumbs.controller.control = productDetailTop;
 // End Product Detail Images
+
+// Fixed Menu
+$(function() {
+  var header = $(".header-main");
+  $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 100) {
+          header.addClass("fixed");
+      } else {
+          header.removeClass("fixed");
+      }
+  });
+});
+// End Fixed Menu
+
+// Box Highlight Blog
+var js_highlight_thumb = new Swiper(".js-highlight-thumb", {
+  loop: true,
+  spaceBetween: 16,
+  slidesPerView: 2,
+  freeMode: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    1200: {
+      slidesPerView: 6,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    480: {
+      slidesPerView: 3,
+    },
+  },
+});
+var js_highlight_blog = new Swiper(".js-highlight-blog", {
+  loop: true,
+  spaceBetween: 16,
+  speed: 500,
+  effect: "fade",
+  thumbs: {
+    swiper: js_highlight_thumb,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+});
+// End Box Highlight Blog
