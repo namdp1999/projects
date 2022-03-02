@@ -63,6 +63,10 @@ Default Style
   --box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   font-size: var(--font-size);
   font-family: var(--font-family);
@@ -194,6 +198,11 @@ textarea.form-control {
   padding-bottom: 70px;
 }
 
+.ptb-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .pt-100 {
   padding-top: 100px;
 }
@@ -210,12 +219,36 @@ textarea.form-control {
   padding-bottom: 70px;
 }
 
+.pt-50 {
+  padding-top: 50px;
+}
+
+.pb-50 {
+  padding-bottom: 50px;
+}
+
 .mt-30 {
   margin-top: 30px;
 }
 
 .mb-30 {
   margin-bottom: 30px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
 }
 
 /*
@@ -965,9 +998,19 @@ Banner Area Style
   margin-bottom: 25px;
 }
 
+.banner-content h2 {
+  color: var(--white-color);
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
 .banner-content p {
   color: var(--white-color);
-  margin-bottom: 35px;
+  margin-bottom: 10px;
+}
+
+.banner-content a {
+  color: var(--white-color);
 }
 
 .banner-area-two {
@@ -5491,6 +5534,10 @@ Single Course Area Style
   padding: 30px;
   border-bottom: 1px solid #eeeeee;
   margin-bottom: 0;
+}
+
+.single-course-area .curriculum-desc {
+  padding: 30px;
 }
 
 .single-course-area .curriculum-content h4 {
