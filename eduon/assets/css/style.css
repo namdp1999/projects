@@ -5496,12 +5496,17 @@ Single Course Area Style
 .single-course-area .curriculum-content h4 {
   font-size: 18px;
   padding: 20px 30px;
+  margin: 0;
+  background-color: #f8f8f8;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .single-course-area .curriculum-content ul li {
-  background-color: #f8f8f8;
+  background-color: #fff;
   position: relative;
   padding: 15px 30px;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .single-course-area .curriculum-content ul li .meet-title {
@@ -5628,6 +5633,8 @@ Single Course Area Style
   padding-bottom: 8px;
   color: var(--white-color);
   border-radius: 10px;
+  background: var(--main-color);
+  width: 0;
 }
 
 .single-course-area .review-content .rating-bar-content .single-bar .rating-bar .skills.html {
