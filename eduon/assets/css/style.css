@@ -1115,18 +1115,30 @@ Banner Area Style
 }
 
 .banner-area-three {
-  background-image: url(../img/banner-img/banner-bg-3.jpg);
+  background-image: url(../img/background/lap-trinh.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 870px;
+  padding-bottom: 100px;
   overflow: hidden;
+  position: relative;
+}
+
+.banner-area-three:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 70%);
 }
 
 .banner-area-three .container-fluid {
   max-width: 1470px;
   padding-left: 30px;
   padding-right: 30px;
+  position: relative;
 }
 
 .banner-area-three .banner-content {
@@ -1326,6 +1338,25 @@ Achieve Area Style
   margin-bottom: 20px;
 }
 
+.achieve-shape__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  object-fit: contain;
+  padding: 30px;
+}
+
 .single-achieve .achieve-shape i {
   font-size: 60px;
   position: absolute;
@@ -1334,11 +1365,11 @@ Achieve Area Style
   width: 100%;
   height: 100%;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2932,16 +2963,21 @@ Affordable Area Style
   transition: var(--transition);
 }
 
-.single-affordable i {
-  font-size: 80px;
-  display: inline-block;
+.single-affordable__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 140px;
   height: 140px;
-  line-height: 140px;
-  margin-bottom: 25px;
+  margin: 0 auto 25px;
   background-color: #edf5fc;
   border-radius: 50%;
-  color: #59a3de;
+}
+
+.single-affordable__image img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
 }
 
 .single-affordable h3 {
@@ -3128,6 +3164,11 @@ Tutor Area Style
   height: 100%;
   -webkit-transition: var(--transition);
   transition: var(--transition);
+}
+
+.single-tutor img {
+  height: 70px;
+  width: auto;
 }
 
 .single-tutor i {
@@ -5249,42 +5290,26 @@ Event Area Style
 
 .account-wrap ul {
   overflow: hidden;
-  padding: 15px 30px;
 }
 
 .account-wrap ul li {
   font-weight: 500;
-  padding-bottom: 31px;
+  padding: 10px 30px;
   position: relative;
   color: var(--heading-color);
-}
-
-.account-wrap ul li::before {
-  content: "";
-  position: absolute;
-  bottom: 15px;
-  left: -30px;
-  width: 200%;
-  height: 1px;
-  background-color: #eaedff;
-}
-
-.account-wrap ul li:last-child {
-  padding-bottom: 0;
-}
-
-.account-wrap ul li:last-child::before {
-  display: none;
+  border-bottom: 1px solid #eaedff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .account-wrap ul li .bold {
-  font-weight: 500;
+  font-weight: 700;
   color: var(--main-color);
 }
 
 .account-wrap ul li span {
-  font-weight: normal;
-  float: right;
+  font-weight: 600;
   color: var(--body-color);
 }
 
@@ -5416,8 +5441,10 @@ Single Event Area Style
 Single Course Area Style
 =====================================================*/
 .single-course-area .single-course-content h3 {
-  font-size: 24px;
+  font-size: 38px;
   margin-bottom: 25px;
+  font-weight: 700;
+  color: var(--main-color);
 }
 
 .single-course-area .single-course-content img {
