@@ -6169,6 +6169,7 @@ Go Top Style*/
   text-align: center;
   height: 42px;
   line-height: 42px;
+  border-radius: 4px;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: .9s;
