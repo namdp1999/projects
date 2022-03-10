@@ -458,6 +458,8 @@ input:focus {
 .header-menu__item {
   margin-left: 25px;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .header-menu__link {
@@ -466,6 +468,7 @@ input:focus {
   display: inline-block;
   position: relative;
   text-align: center;
+  flex: 1;
 }
 
 .header-menu__link:hover {
@@ -485,6 +488,16 @@ input:focus {
   width: 80%;
   height: 4px;
   background: var(--color-main);
+}
+
+.header-menu__link-dropdown {
+  display: flex;
+  align-items: center;
+  padding-left: 6px;
+}
+
+.header-menu__sub {
+  width: 100%;
 }
 
 .header-menu__overlay, .header-menu__btn-open, .header-menu__btn-close {
@@ -526,7 +539,7 @@ input:focus {
 
 @media (max-width: 991px) {
   .header-menu__list {
-    display: none;
+    display: block;
     position: fixed;
     left: 0;
     top: 0;
@@ -535,10 +548,44 @@ input:focus {
     height: 100vh;
     width: 300px;
     max-width: 80%;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    -o-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    -webkit-transition: transform 0.3s cubic-bezier(0.65, 0.05, 0.51, 0.82);
+    transition: transform 0.3s cubic-bezier(0.65, 0.05, 0.51, 0.82);
+  }
+
+  .header-menu.show .header-menu__list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 
   .header-menu__item {
     margin-left: 0;
+    border-bottom: 1px solid var(--color-highlight);
+  }
+
+  .header-menu__link-dropdown {
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-highlight);
+    border-left: 1px solid var(--color-highlight);
+    padding-left: 0;
+  }
+
+  .header-menu__item.show .header-menu__link {
+    border-bottom: 1px solid var(--color-highlight);
+  }
+
+  .header-menu__item.show .header-menu__link-dropdown {
+    border-bottom: 1px solid var(--color-highlight);
   }
 
   .header-menu__link {
