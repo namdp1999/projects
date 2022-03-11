@@ -1646,25 +1646,26 @@ input:focus {
 
 .service-blog-item {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  margin-bottom: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-blog-item__image {
   position: relative;
-  padding-top: 66%;
 }
 
 .service-blog-item__image img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 4.5/3;
   object-fit: cover;
 }
 
 .service-blog-item__content {
   padding: 14px;
+  position: relative;
+  padding-bottom: 60px;
+  flex: 1;
 }
 
 .service-blog-item__title {
@@ -1689,6 +1690,9 @@ input:focus {
   color: var(--white);
   background: var(--color-main);
   padding: 10px 30px;
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
 }
 
 .service-blog-item__link:hover {
