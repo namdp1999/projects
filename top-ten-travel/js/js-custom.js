@@ -1,4 +1,4 @@
-// Form search
+// Form Search
 $(".header__search .find-product")
   .focus(function () {
     $(".search-suggest").addClass("show");
@@ -9,6 +9,23 @@ $(".header__search .search-suggest__bg")
     $(".search-suggest").removeClass("show");
     $(".search-suggest__bg").removeClass("show");
   });
+// End Form Search
+
+// Menu Vertical
+if($(".search-advanced__wrap")) {
+  let widthContainerMenuVertical = $(".search-advanced__wrap > .container")[0].offsetWidth;
+  let widthMainMenuVertical = $(".search-advanced__wrap .menu-vertical")[0].offsetWidth;
+  let widthSubMenuVertical = widthContainerMenuVertical - widthMainMenuVertical - 30;
+  let listSubMenu = document.querySelectorAll(".search-advanced__wrap .menu-vertical-sub");
+  listSubMenu.forEach(item => {
+    item.style.width = widthSubMenuVertical + 'px';
+    let counterColumn = $(item).find(".menu-vertical-sub__box").length;
+    if(counterColumn === 5) {
+      console.log($(item).find(".menu-vertical-sub__wrap").addClass("five-col"));
+    }
+  });
+}
+// End Menu Vertical
 
 // Read More, Read Less Button
 $("#viewMoreContent")
@@ -309,16 +326,18 @@ for (let i = 0; i < productShowBeforeClick; i++) {
     elementList[i].style.display = 'block';
   }
 }
-buttonLoadMore.addEventListener('click', (e) => {
-  for (let i = productShowBeforeClick; i < productShowBeforeClick + productShowAfterClick; i++) {
-    if (elementList[i]) {
-      elementList[i].style.display = 'block';
+if(buttonLoadMore) {
+  buttonLoadMore.addEventListener('click', (e) => {
+    for (let i = productShowBeforeClick; i < productShowBeforeClick + productShowAfterClick; i++) {
+      if (elementList[i]) {
+        elementList[i].style.display = 'block';
+      }
     }
-  }
-  productShowBeforeClick += productShowAfterClick;
-  // Load more button will be hidden after list fully loaded
-  if (productShowBeforeClick >= elementList.length) {
-    event.target.style.display = 'none';
-  }
-});
+    productShowBeforeClick += productShowAfterClick;
+    // Load more button will be hidden after list fully loaded
+    if (productShowBeforeClick >= elementList.length) {
+      event.target.style.display = 'none';
+    }
+  });
+}
 // End Load More Product
