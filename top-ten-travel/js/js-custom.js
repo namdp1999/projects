@@ -12,7 +12,7 @@ $(".header__search .search-suggest__bg")
 // End Form Search
 
 // Menu Vertical
-if($(".search-advanced__wrap")) {
+if($(".search-advanced__wrap").length > 0) {
   let widthContainerMenuVertical = $(".search-advanced__wrap > .container")[0].offsetWidth;
   let widthMainMenuVertical = $(".search-advanced__wrap .menu-vertical")[0].offsetWidth;
   let widthSubMenuVertical = widthContainerMenuVertical - widthMainMenuVertical - 20;
@@ -164,8 +164,29 @@ var js_flash_sales = new Swiper(".js-flash-sales", {
   },
 });
 
-// Banner Slide
+// Partners Slide
 var js_banner_slide = new Swiper(".js-partners-slide", {
+  slidesPerView: 2,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+// Category Slide
+var js_category_slide = new Swiper(".js-category-slide", {
   slidesPerView: 2,
   spaceBetween: 10,
   navigation: {
@@ -360,8 +381,8 @@ $('.btn-sub').click(function () {
 
 // Load More Product
 const buttonLoadMore = document.querySelector('#buttonLoadMore');
-let productShowBeforeClick = 10;
-let productShowAfterClick = 3;
+let productShowBeforeClick = 16;
+let productShowAfterClick = 4;
 const elementList = [...document.querySelectorAll('.js-product-load-more .products-grid__item')];
 for (let i = 0; i < productShowBeforeClick; i++) {
   if (elementList[i]) {
