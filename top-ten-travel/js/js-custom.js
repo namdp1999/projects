@@ -15,13 +15,13 @@ $(".header__search .search-suggest__bg")
 if($(".search-advanced__wrap")) {
   let widthContainerMenuVertical = $(".search-advanced__wrap > .container")[0].offsetWidth;
   let widthMainMenuVertical = $(".search-advanced__wrap .menu-vertical")[0].offsetWidth;
-  let widthSubMenuVertical = widthContainerMenuVertical - widthMainMenuVertical - 30;
+  let widthSubMenuVertical = widthContainerMenuVertical - widthMainMenuVertical - 20;
   let listSubMenu = document.querySelectorAll(".search-advanced__wrap .menu-vertical-sub");
   listSubMenu.forEach(item => {
     item.style.width = widthSubMenuVertical + 'px';
     let counterColumn = $(item).find(".menu-vertical-sub__box").length;
     if(counterColumn === 5) {
-      console.log($(item).find(".menu-vertical-sub__wrap").addClass("five-col"));
+      $(item).find(".menu-vertical-sub__wrap").addClass("five-col");
     }
   });
 }
@@ -91,7 +91,7 @@ var js_slider_home_2 = new Swiper(".js-slider-home-2", {
 // Banner Slide
 var js_banner_slide = new Swiper(".js-banner-slide", {
   slidesPerView: 2,
-  spaceBetween: 10,
+  spaceBetween: 20,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -105,6 +105,30 @@ var js_banner_slide = new Swiper(".js-banner-slide", {
     },
     1024: {
       slidesPerView: 4,
+    },
+  },
+});
+
+// Banner Slide 2
+var js_banner_slide = new Swiper(".js-banner-slide-2", {
+  slidesPerView: 2,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 3,
     },
   },
 });
@@ -175,6 +199,24 @@ var js_products_slide = new Swiper(".js-products-slide", {
     },
     1200: {
       slidesPerView: 5,
+    },
+  },
+});
+
+// Products Highlight
+var js_products_highlight = new Swiper(".js-products-highlight", {
+  slidesPerView: 2,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 2,
+    },
+    1200: {
+      slidesPerView: 3,
     },
   },
 });
