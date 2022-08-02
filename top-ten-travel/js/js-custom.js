@@ -270,7 +270,7 @@ var js_products_segment = new Swiper(".js-products-segment", {
       slidesPerView: 3,
     },
     1200: {
-      slidesPerView: 4,
+      slidesPerView: 3,
     },
   },
 });
@@ -374,7 +374,7 @@ $('.btn-add').click(function () {
   $(this).prev().val(+$(this).prev().val() + 1);
 });
 $('.btn-sub').click(function () {
-  if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
+  if ($(this).next().val() > 0) $(this).next().val(+$(this).next().val() - 1);
 });
 
 // End Product Detail Page
@@ -404,3 +404,16 @@ if(buttonLoadMore) {
   });
 }
 // End Load More Product
+
+// Select Amount
+const selectAmount = document.querySelectorAll('.select-amount');
+if(selectAmount.length > 0) {
+  selectAmount.forEach(item => {
+    const selectAmountHead = item.querySelector(".select-amount__head");
+    selectAmountHead.addEventListener('click', (e) => {
+      const dropdown = item.querySelector(".select-amount__dropdown");
+      dropdown.classList.toggle("show");
+    });
+  });
+}
+// End Select Amount
